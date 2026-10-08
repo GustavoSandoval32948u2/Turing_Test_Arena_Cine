@@ -1,0 +1,126 @@
+CAPA LEXICA DE CINE — ENTREGA DE LA PARTE DE EDIN
+
+QUE CAMBIE
+Reemplace el reconocimiento de frases por expresiones regulares por un banco
+finito de AFD con tablas de transicion explicitas. Cada AFD consume simbolos
+uno por uno mediante delta[(estado, simbolo)]. No usa IA generativa.
+Conserve la interfaz clasificar(texto) y clasificar_detallado(texto), los
+12 tokens del proyecto y las prioridades de la version anterior.
+Agregue recorridos reales, pruebas estructurales, tablas CSV y un diagrama
+editable generado desde las mismas tablas que ejecuta el programa.
+No modifique el AFN, la pila ni las plantillas de los compañeros.
+
+COMO PROBAR (desde la carpeta que contiene main.py)
+1. py pruebas_lexico.py      -> 36/36 casos de clasificacion.
+2. py pruebas_afd.py         -> 157 AFD y 7654 secuencias verificadas.
+3. py probar_lexico.py       -> consulta manual con recorrido real.
+   Escribe: eres un bot
+   Veras: q0 -- eres --> q1 -- un --> q2 -- bot --> q3.
+   q3 es aceptacion y el token es PROVOCACION.
+   Escribe: salir para terminar.
+4. py probar_lexico.py --todos
+   Muestra tambien los recorridos de los AFD que no aceptan.
+5. py main.py sigue usando el clasificador. El estado INICIO y la respuesta
+   temporal pertenecen al esqueleto de integracion, no al AFD lexico.
+
+DEFINICION FORMAL Y FUNCIONAMIENTO
+Para una frase de n simbolos: Q={q0,...,qn}, inicio q0, F={qn}.
+Sigma son las palabras distintas de esa frase mas la clase <OTRO>.
+La funcion delta tiene exactamente un destino para cada par estado/simbolo.
+<OTRO> representa todo simbolo que no aparece en esa frase.
+qn es absorbente: si se encontro la frase, sigue aceptando el resto del texto.
+Antes de aceptar, qk representa el prefijo mas largo de la frase que coincide
+con un sufijo del texto consumido. Esto permite reconocer 'hasta hasta luego'
+sin perder el segundo 'hasta'. Una frase incompleta no se acepta.
+Las transiciones se construyen una vez en __init__; la ejecucion solo las lee.
+
+Se ejecutan AFD independientes de frases. Una categoria reconoce la union de
+sus AFD. La seleccion por prioridad devuelve un solo token. Esto NO es un AFN:
+en cada AFD existe un unico destino; no se elige ninguna transicion al azar.
+El banco tambien puede verse como un producto finito de sus estados, con una
+funcion de salida por prioridad, sin tener que expandir todo el producto.
+DESCONOCIDO es el resultado de no aceptar ninguna regla (no un AFD de frase).
+
+NORMALIZACION Y LIMITES
+Se pasa a minusculas y se eliminan tildes. Numeros se conservan dentro de las
+palabras: hola123 no es hola. La puntuacion corriente separa palabras.
+Los signos ¿ ? ¡ ! se consumen como simbolos separados; no se unen palabras
+al quitarlos. Solo signos o espacios devuelven DESCONOCIDO.
+Una frase se reconoce por palabras contiguas. No se corrigen errores de
+escritura: 'ers un bot' es DESCONOCIDO. Una interrupcion con signo dentro de
+una frase puede impedir reconocerla. Ejemplo: 'hasta ! luego' no es despedida.
+Las entidades se devuelven normalizadas, por ejemplo 'titanic'.
+
+PRIORIDAD (la primera categoria que acepta gana)
+PROVOCACION > DESPEDIDA > SALUDO > RETOMAR_TEMA > MENCION_PELICULA
+> MENCION_ACTOR > MENCION_GENERO > OPINION > NEGACION > AFIRMACION > PREGUNTA.
+Las menciones de pelicula/actor en esta lista son nombres del catalogo.
+Despues se prueban los indicadores genericos: pelicula/filme/movie/peli y
+actor/actriz/protagonista/dirigida por. Asi una pregunta generica sobre una
+pelicula conserva PREGUNTA, mientras Titanic conserva MENCION_PELICULA.
+Dentro de una categoria se priorizan frases mas largas; empates mantienen
+el orden del catalogo. En PREGUNTA primero se buscan los signos ? y ¿.
+El orden completo aparece en catalogo_y_prioridad.csv.
+
+EJEMPLOS PARA DOCUMENTACION Y DEFENSA
+hola                         -> SALUDO
+hasta luego                  -> DESPEDIDA
+que recomiendas?             -> PREGUNTA
+si                           -> AFIRMACION
+no                           -> NEGACION
+me gusta                     -> OPINION
+Titanic                      -> MENCION_PELICULA
+Tom Hanks                    -> MENCION_ACTOR
+comedia                      -> MENCION_GENERO
+volvamos                     -> RETOMAR_TEMA
+eres un bot                  -> PROVOCACION
+holanda                      -> DESCONOCIDO
+Hola, que opinas de Titanic?  -> SALUDO (prioridad)
+Que opinas de Titanic?        -> MENCION_PELICULA (prioridad)
+
+DIAGRAMA Y CORRESPONDENCIA
+Abrir documentacion_lexica/AFD_Lexico_Cine.drawio en diagrams.net.
+Tiene una pagina por frase (157); A000..A156 es el orden real de seleccion.
+Cada pagina muestra TODOS los estados y transiciones del AFD correspondiente,
+con flecha inicial, doble circulo final y tabla para leer las aristas cruzadas.
+transiciones_afd.csv contiene la misma delta en formato de tabla.
+py exportar_afd.py regenera ambos archivos si se cambia el catalogo.
+
+El PNG original del grupo se conserva como referencia, no se presenta como
+un diagrama exacto del nuevo codigo. Sus nueve categorias visibles se mantienen;
+AFIRMACION, NEGACION y RETOMAR_TEMA ya estaban en definiciones.py y se conservan
+como ampliaciones. 'eres un bot' tambien es una ampliacion documentada.
+El catalogo de nombres y sinonimos es mas amplio que las etiquetas del PNG.
+Los ovalos de categoria del PNG son una vista resumida: no sustituyen los
+estados internos necesarios para reconocer frases de varias palabras.
+Gustavo debe integrar este detalle lexico y las ampliaciones en el diagrama
+completo del equipo, junto al AFN y la pila que implementen los compañeros.
+
+PRUEBAS
+36 casos: normales, ambiguos, limites, frases del diagrama y regresiones.
+Las pruebas de AFD comparan con un oraculo independiente de ventanas contiguas,
+comprueban delta total y destinos validos, aceptacion absorbente, reinicios,
+frases incompletas, solapamientos, limites de palabra y trazas reproducibles.
+Pasar estas pruebas no garantiza interpretar cualquier frase del español:
+se reconoce un lenguaje finito de patrones dentro de entradas arbitrarias.
+
+COMO EXPLICAR TU PARTE
+'Recibo texto, lo normalizo y separo en simbolos. Cada AFD recorre una tabla
+con un unico destino por simbolo. Si varios aceptan, aplico la prioridad
+acordada y entrego un token al motor de dialogo. El AFD lexico no decide la
+respuesta ni conserva contexto entre turnos; esas son las siguientes capas.'
+Practica dibujar el AFD de 'eres un bot' y sus reinicios. Para una modificacion
+en vivo agrega una frase a REGLAS, un caso a CASOS, ejecuta ambas pruebas y
+regenera el diagrama. No necesitas cambiar la funcion ejecutar.
+
+GIT Y ENTREGA
+No se han creado commits ni subido archivos a tu repositorio desde esta entrega.
+Dentro de la copia REAL del repositorio del equipo, integra tus archivos y usa:
+git status
+git add afd/clasificador.py pruebas_lexico.py pruebas_afd.py probar_lexico.py exportar_afd.py documentacion_lexica LEEME_PARTE_LEXICA.txt CAMBIOS.txt README.md
+git diff --cached
+git commit -m "Implementa AFD lexicos con transiciones, trazas y pruebas"
+Hazlo solo despues de revisar que los archivos preparados sean los tuyos.
+Conserva el historial que ya exista. Los cambios futuros deben tener commits
+reales a medida que trabajes; no inventes commits anteriores.
+La practica individual y el registro en Git quedan a cargo del estudiante.

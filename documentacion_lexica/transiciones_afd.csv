@@ -1,0 +1,1036 @@
+﻿AFD,Token,Frase,Origen,Simbolo,Destino,Aceptacion
+A000,PROVOCACION,que aburrido eres,q0,aburrido,q0,False
+A000,PROVOCACION,que aburrido eres,q0,eres,q0,False
+A000,PROVOCACION,que aburrido eres,q0,que,q1,False
+A000,PROVOCACION,que aburrido eres,q0,<OTRO>,q0,False
+A000,PROVOCACION,que aburrido eres,q1,aburrido,q2,False
+A000,PROVOCACION,que aburrido eres,q1,eres,q0,False
+A000,PROVOCACION,que aburrido eres,q1,que,q1,False
+A000,PROVOCACION,que aburrido eres,q1,<OTRO>,q0,False
+A000,PROVOCACION,que aburrido eres,q2,aburrido,q0,False
+A000,PROVOCACION,que aburrido eres,q2,eres,q3,True
+A000,PROVOCACION,que aburrido eres,q2,que,q1,False
+A000,PROVOCACION,que aburrido eres,q2,<OTRO>,q0,False
+A000,PROVOCACION,que aburrido eres,q3,aburrido,q3,True
+A000,PROVOCACION,que aburrido eres,q3,eres,q3,True
+A000,PROVOCACION,que aburrido eres,q3,que,q3,True
+A000,PROVOCACION,que aburrido eres,q3,<OTRO>,q3,True
+A001,PROVOCACION,eres un bot,q0,bot,q0,False
+A001,PROVOCACION,eres un bot,q0,eres,q1,False
+A001,PROVOCACION,eres un bot,q0,un,q0,False
+A001,PROVOCACION,eres un bot,q0,<OTRO>,q0,False
+A001,PROVOCACION,eres un bot,q1,bot,q0,False
+A001,PROVOCACION,eres un bot,q1,eres,q1,False
+A001,PROVOCACION,eres un bot,q1,un,q2,False
+A001,PROVOCACION,eres un bot,q1,<OTRO>,q0,False
+A001,PROVOCACION,eres un bot,q2,bot,q3,True
+A001,PROVOCACION,eres un bot,q2,eres,q1,False
+A001,PROVOCACION,eres un bot,q2,un,q0,False
+A001,PROVOCACION,eres un bot,q2,<OTRO>,q0,False
+A001,PROVOCACION,eres un bot,q3,bot,q3,True
+A001,PROVOCACION,eres un bot,q3,eres,q3,True
+A001,PROVOCACION,eres un bot,q3,un,q3,True
+A001,PROVOCACION,eres un bot,q3,<OTRO>,q3,True
+A002,PROVOCACION,eres tonto,q0,eres,q1,False
+A002,PROVOCACION,eres tonto,q0,tonto,q0,False
+A002,PROVOCACION,eres tonto,q0,<OTRO>,q0,False
+A002,PROVOCACION,eres tonto,q1,eres,q1,False
+A002,PROVOCACION,eres tonto,q1,tonto,q2,True
+A002,PROVOCACION,eres tonto,q1,<OTRO>,q0,False
+A002,PROVOCACION,eres tonto,q2,eres,q2,True
+A002,PROVOCACION,eres tonto,q2,tonto,q2,True
+A002,PROVOCACION,eres tonto,q2,<OTRO>,q2,True
+A003,PROVOCACION,no sirves,q0,no,q1,False
+A003,PROVOCACION,no sirves,q0,sirves,q0,False
+A003,PROVOCACION,no sirves,q0,<OTRO>,q0,False
+A003,PROVOCACION,no sirves,q1,no,q1,False
+A003,PROVOCACION,no sirves,q1,sirves,q2,True
+A003,PROVOCACION,no sirves,q1,<OTRO>,q0,False
+A003,PROVOCACION,no sirves,q2,no,q2,True
+A003,PROVOCACION,no sirves,q2,sirves,q2,True
+A003,PROVOCACION,no sirves,q2,<OTRO>,q2,True
+A004,PROVOCACION,eres malo,q0,eres,q1,False
+A004,PROVOCACION,eres malo,q0,malo,q0,False
+A004,PROVOCACION,eres malo,q0,<OTRO>,q0,False
+A004,PROVOCACION,eres malo,q1,eres,q1,False
+A004,PROVOCACION,eres malo,q1,malo,q2,True
+A004,PROVOCACION,eres malo,q1,<OTRO>,q0,False
+A004,PROVOCACION,eres malo,q2,eres,q2,True
+A004,PROVOCACION,eres malo,q2,malo,q2,True
+A004,PROVOCACION,eres malo,q2,<OTRO>,q2,True
+A005,PROVOCACION,aburrido,q0,aburrido,q1,True
+A005,PROVOCACION,aburrido,q0,<OTRO>,q0,False
+A005,PROVOCACION,aburrido,q1,aburrido,q1,True
+A005,PROVOCACION,aburrido,q1,<OTRO>,q1,True
+A006,PROVOCACION,no sabes,q0,no,q1,False
+A006,PROVOCACION,no sabes,q0,sabes,q0,False
+A006,PROVOCACION,no sabes,q0,<OTRO>,q0,False
+A006,PROVOCACION,no sabes,q1,no,q1,False
+A006,PROVOCACION,no sabes,q1,sabes,q2,True
+A006,PROVOCACION,no sabes,q1,<OTRO>,q0,False
+A006,PROVOCACION,no sabes,q2,no,q2,True
+A006,PROVOCACION,no sabes,q2,sabes,q2,True
+A006,PROVOCACION,no sabes,q2,<OTRO>,q2,True
+A007,PROVOCACION,estupido,q0,estupido,q1,True
+A007,PROVOCACION,estupido,q0,<OTRO>,q0,False
+A007,PROVOCACION,estupido,q1,estupido,q1,True
+A007,PROVOCACION,estupido,q1,<OTRO>,q1,True
+A008,PROVOCACION,callate,q0,callate,q1,True
+A008,PROVOCACION,callate,q0,<OTRO>,q0,False
+A008,PROVOCACION,callate,q1,callate,q1,True
+A008,PROVOCACION,callate,q1,<OTRO>,q1,True
+A009,PROVOCACION,idiota,q0,idiota,q1,True
+A009,PROVOCACION,idiota,q0,<OTRO>,q0,False
+A009,PROVOCACION,idiota,q1,idiota,q1,True
+A009,PROVOCACION,idiota,q1,<OTRO>,q1,True
+A010,PROVOCACION,inutil,q0,inutil,q1,True
+A010,PROVOCACION,inutil,q0,<OTRO>,q0,False
+A010,PROVOCACION,inutil,q1,inutil,q1,True
+A010,PROVOCACION,inutil,q1,<OTRO>,q1,True
+A011,PROVOCACION,basura,q0,basura,q1,True
+A011,PROVOCACION,basura,q0,<OTRO>,q0,False
+A011,PROVOCACION,basura,q1,basura,q1,True
+A011,PROVOCACION,basura,q1,<OTRO>,q1,True
+A012,PROVOCACION,tonto,q0,tonto,q1,True
+A012,PROVOCACION,tonto,q0,<OTRO>,q0,False
+A012,PROVOCACION,tonto,q1,tonto,q1,True
+A012,PROVOCACION,tonto,q1,<OTRO>,q1,True
+A013,PROVOCACION,malo,q0,malo,q1,True
+A013,PROVOCACION,malo,q0,<OTRO>,q0,False
+A013,PROVOCACION,malo,q1,malo,q1,True
+A013,PROVOCACION,malo,q1,<OTRO>,q1,True
+A014,DESPEDIDA,hasta pronto,q0,hasta,q1,False
+A014,DESPEDIDA,hasta pronto,q0,pronto,q0,False
+A014,DESPEDIDA,hasta pronto,q0,<OTRO>,q0,False
+A014,DESPEDIDA,hasta pronto,q1,hasta,q1,False
+A014,DESPEDIDA,hasta pronto,q1,pronto,q2,True
+A014,DESPEDIDA,hasta pronto,q1,<OTRO>,q0,False
+A014,DESPEDIDA,hasta pronto,q2,hasta,q2,True
+A014,DESPEDIDA,hasta pronto,q2,pronto,q2,True
+A014,DESPEDIDA,hasta pronto,q2,<OTRO>,q2,True
+A015,DESPEDIDA,hasta manana,q0,hasta,q1,False
+A015,DESPEDIDA,hasta manana,q0,manana,q0,False
+A015,DESPEDIDA,hasta manana,q0,<OTRO>,q0,False
+A015,DESPEDIDA,hasta manana,q1,hasta,q1,False
+A015,DESPEDIDA,hasta manana,q1,manana,q2,True
+A015,DESPEDIDA,hasta manana,q1,<OTRO>,q0,False
+A015,DESPEDIDA,hasta manana,q2,hasta,q2,True
+A015,DESPEDIDA,hasta manana,q2,manana,q2,True
+A015,DESPEDIDA,hasta manana,q2,<OTRO>,q2,True
+A016,DESPEDIDA,hasta luego,q0,hasta,q1,False
+A016,DESPEDIDA,hasta luego,q0,luego,q0,False
+A016,DESPEDIDA,hasta luego,q0,<OTRO>,q0,False
+A016,DESPEDIDA,hasta luego,q1,hasta,q1,False
+A016,DESPEDIDA,hasta luego,q1,luego,q2,True
+A016,DESPEDIDA,hasta luego,q1,<OTRO>,q0,False
+A016,DESPEDIDA,hasta luego,q2,hasta,q2,True
+A016,DESPEDIDA,hasta luego,q2,luego,q2,True
+A016,DESPEDIDA,hasta luego,q2,<OTRO>,q2,True
+A017,DESPEDIDA,nos vemos,q0,nos,q1,False
+A017,DESPEDIDA,nos vemos,q0,vemos,q0,False
+A017,DESPEDIDA,nos vemos,q0,<OTRO>,q0,False
+A017,DESPEDIDA,nos vemos,q1,nos,q1,False
+A017,DESPEDIDA,nos vemos,q1,vemos,q2,True
+A017,DESPEDIDA,nos vemos,q1,<OTRO>,q0,False
+A017,DESPEDIDA,nos vemos,q2,nos,q2,True
+A017,DESPEDIDA,nos vemos,q2,vemos,q2,True
+A017,DESPEDIDA,nos vemos,q2,<OTRO>,q2,True
+A018,DESPEDIDA,me voy,q0,me,q1,False
+A018,DESPEDIDA,me voy,q0,voy,q0,False
+A018,DESPEDIDA,me voy,q0,<OTRO>,q0,False
+A018,DESPEDIDA,me voy,q1,me,q1,False
+A018,DESPEDIDA,me voy,q1,voy,q2,True
+A018,DESPEDIDA,me voy,q1,<OTRO>,q0,False
+A018,DESPEDIDA,me voy,q2,me,q2,True
+A018,DESPEDIDA,me voy,q2,voy,q2,True
+A018,DESPEDIDA,me voy,q2,<OTRO>,q2,True
+A019,DESPEDIDA,adios,q0,adios,q1,True
+A019,DESPEDIDA,adios,q0,<OTRO>,q0,False
+A019,DESPEDIDA,adios,q1,adios,q1,True
+A019,DESPEDIDA,adios,q1,<OTRO>,q1,True
+A020,DESPEDIDA,chao,q0,chao,q1,True
+A020,DESPEDIDA,chao,q0,<OTRO>,q0,False
+A020,DESPEDIDA,chao,q1,chao,q1,True
+A020,DESPEDIDA,chao,q1,<OTRO>,q1,True
+A021,DESPEDIDA,chau,q0,chau,q1,True
+A021,DESPEDIDA,chau,q0,<OTRO>,q0,False
+A021,DESPEDIDA,chau,q1,chau,q1,True
+A021,DESPEDIDA,chau,q1,<OTRO>,q1,True
+A022,DESPEDIDA,bye,q0,bye,q1,True
+A022,DESPEDIDA,bye,q0,<OTRO>,q0,False
+A022,DESPEDIDA,bye,q1,bye,q1,True
+A022,DESPEDIDA,bye,q1,<OTRO>,q1,True
+A023,SALUDO,buenas tardes,q0,buenas,q1,False
+A023,SALUDO,buenas tardes,q0,tardes,q0,False
+A023,SALUDO,buenas tardes,q0,<OTRO>,q0,False
+A023,SALUDO,buenas tardes,q1,buenas,q1,False
+A023,SALUDO,buenas tardes,q1,tardes,q2,True
+A023,SALUDO,buenas tardes,q1,<OTRO>,q0,False
+A023,SALUDO,buenas tardes,q2,buenas,q2,True
+A023,SALUDO,buenas tardes,q2,tardes,q2,True
+A023,SALUDO,buenas tardes,q2,<OTRO>,q2,True
+A024,SALUDO,buenas noches,q0,buenas,q1,False
+A024,SALUDO,buenas noches,q0,noches,q0,False
+A024,SALUDO,buenas noches,q0,<OTRO>,q0,False
+A024,SALUDO,buenas noches,q1,buenas,q1,False
+A024,SALUDO,buenas noches,q1,noches,q2,True
+A024,SALUDO,buenas noches,q1,<OTRO>,q0,False
+A024,SALUDO,buenas noches,q2,buenas,q2,True
+A024,SALUDO,buenas noches,q2,noches,q2,True
+A024,SALUDO,buenas noches,q2,<OTRO>,q2,True
+A025,SALUDO,buenos dias,q0,buenos,q1,False
+A025,SALUDO,buenos dias,q0,dias,q0,False
+A025,SALUDO,buenos dias,q0,<OTRO>,q0,False
+A025,SALUDO,buenos dias,q1,buenos,q1,False
+A025,SALUDO,buenos dias,q1,dias,q2,True
+A025,SALUDO,buenos dias,q1,<OTRO>,q0,False
+A025,SALUDO,buenos dias,q2,buenos,q2,True
+A025,SALUDO,buenos dias,q2,dias,q2,True
+A025,SALUDO,buenos dias,q2,<OTRO>,q2,True
+A026,SALUDO,que tal,q0,que,q1,False
+A026,SALUDO,que tal,q0,tal,q0,False
+A026,SALUDO,que tal,q0,<OTRO>,q0,False
+A026,SALUDO,que tal,q1,que,q1,False
+A026,SALUDO,que tal,q1,tal,q2,True
+A026,SALUDO,que tal,q1,<OTRO>,q0,False
+A026,SALUDO,que tal,q2,que,q2,True
+A026,SALUDO,que tal,q2,tal,q2,True
+A026,SALUDO,que tal,q2,<OTRO>,q2,True
+A027,SALUDO,saludos,q0,saludos,q1,True
+A027,SALUDO,saludos,q0,<OTRO>,q0,False
+A027,SALUDO,saludos,q1,saludos,q1,True
+A027,SALUDO,saludos,q1,<OTRO>,q1,True
+A028,SALUDO,buenas,q0,buenas,q1,True
+A028,SALUDO,buenas,q0,<OTRO>,q0,False
+A028,SALUDO,buenas,q1,buenas,q1,True
+A028,SALUDO,buenas,q1,<OTRO>,q1,True
+A029,SALUDO,hola,q0,hola,q1,True
+A029,SALUDO,hola,q0,<OTRO>,q0,False
+A029,SALUDO,hola,q1,hola,q1,True
+A029,SALUDO,hola,q1,<OTRO>,q1,True
+A030,SALUDO,holi,q0,holi,q1,True
+A030,SALUDO,holi,q0,<OTRO>,q0,False
+A030,SALUDO,holi,q1,holi,q1,True
+A030,SALUDO,holi,q1,<OTRO>,q1,True
+A031,SALUDO,hey,q0,hey,q1,True
+A031,SALUDO,hey,q0,<OTRO>,q0,False
+A031,SALUDO,hey,q1,hey,q1,True
+A031,SALUDO,hey,q1,<OTRO>,q1,True
+A032,RETOMAR_TEMA,sobre lo anterior,q0,anterior,q0,False
+A032,RETOMAR_TEMA,sobre lo anterior,q0,lo,q0,False
+A032,RETOMAR_TEMA,sobre lo anterior,q0,sobre,q1,False
+A032,RETOMAR_TEMA,sobre lo anterior,q0,<OTRO>,q0,False
+A032,RETOMAR_TEMA,sobre lo anterior,q1,anterior,q0,False
+A032,RETOMAR_TEMA,sobre lo anterior,q1,lo,q2,False
+A032,RETOMAR_TEMA,sobre lo anterior,q1,sobre,q1,False
+A032,RETOMAR_TEMA,sobre lo anterior,q1,<OTRO>,q0,False
+A032,RETOMAR_TEMA,sobre lo anterior,q2,anterior,q3,True
+A032,RETOMAR_TEMA,sobre lo anterior,q2,lo,q0,False
+A032,RETOMAR_TEMA,sobre lo anterior,q2,sobre,q1,False
+A032,RETOMAR_TEMA,sobre lo anterior,q2,<OTRO>,q0,False
+A032,RETOMAR_TEMA,sobre lo anterior,q3,anterior,q3,True
+A032,RETOMAR_TEMA,sobre lo anterior,q3,lo,q3,True
+A032,RETOMAR_TEMA,sobre lo anterior,q3,sobre,q3,True
+A032,RETOMAR_TEMA,sobre lo anterior,q3,<OTRO>,q3,True
+A033,RETOMAR_TEMA,el tema anterior,q0,anterior,q0,False
+A033,RETOMAR_TEMA,el tema anterior,q0,el,q1,False
+A033,RETOMAR_TEMA,el tema anterior,q0,tema,q0,False
+A033,RETOMAR_TEMA,el tema anterior,q0,<OTRO>,q0,False
+A033,RETOMAR_TEMA,el tema anterior,q1,anterior,q0,False
+A033,RETOMAR_TEMA,el tema anterior,q1,el,q1,False
+A033,RETOMAR_TEMA,el tema anterior,q1,tema,q2,False
+A033,RETOMAR_TEMA,el tema anterior,q1,<OTRO>,q0,False
+A033,RETOMAR_TEMA,el tema anterior,q2,anterior,q3,True
+A033,RETOMAR_TEMA,el tema anterior,q2,el,q1,False
+A033,RETOMAR_TEMA,el tema anterior,q2,tema,q0,False
+A033,RETOMAR_TEMA,el tema anterior,q2,<OTRO>,q0,False
+A033,RETOMAR_TEMA,el tema anterior,q3,anterior,q3,True
+A033,RETOMAR_TEMA,el tema anterior,q3,el,q3,True
+A033,RETOMAR_TEMA,el tema anterior,q3,tema,q3,True
+A033,RETOMAR_TEMA,el tema anterior,q3,<OTRO>,q3,True
+A034,RETOMAR_TEMA,de lo anterior,q0,anterior,q0,False
+A034,RETOMAR_TEMA,de lo anterior,q0,de,q1,False
+A034,RETOMAR_TEMA,de lo anterior,q0,lo,q0,False
+A034,RETOMAR_TEMA,de lo anterior,q0,<OTRO>,q0,False
+A034,RETOMAR_TEMA,de lo anterior,q1,anterior,q0,False
+A034,RETOMAR_TEMA,de lo anterior,q1,de,q1,False
+A034,RETOMAR_TEMA,de lo anterior,q1,lo,q2,False
+A034,RETOMAR_TEMA,de lo anterior,q1,<OTRO>,q0,False
+A034,RETOMAR_TEMA,de lo anterior,q2,anterior,q3,True
+A034,RETOMAR_TEMA,de lo anterior,q2,de,q1,False
+A034,RETOMAR_TEMA,de lo anterior,q2,lo,q0,False
+A034,RETOMAR_TEMA,de lo anterior,q2,<OTRO>,q0,False
+A034,RETOMAR_TEMA,de lo anterior,q3,anterior,q3,True
+A034,RETOMAR_TEMA,de lo anterior,q3,de,q3,True
+A034,RETOMAR_TEMA,de lo anterior,q3,lo,q3,True
+A034,RETOMAR_TEMA,de lo anterior,q3,<OTRO>,q3,True
+A035,RETOMAR_TEMA,esa pelicula,q0,esa,q1,False
+A035,RETOMAR_TEMA,esa pelicula,q0,pelicula,q0,False
+A035,RETOMAR_TEMA,esa pelicula,q0,<OTRO>,q0,False
+A035,RETOMAR_TEMA,esa pelicula,q1,esa,q1,False
+A035,RETOMAR_TEMA,esa pelicula,q1,pelicula,q2,True
+A035,RETOMAR_TEMA,esa pelicula,q1,<OTRO>,q0,False
+A035,RETOMAR_TEMA,esa pelicula,q2,esa,q2,True
+A035,RETOMAR_TEMA,esa pelicula,q2,pelicula,q2,True
+A035,RETOMAR_TEMA,esa pelicula,q2,<OTRO>,q2,True
+A036,RETOMAR_TEMA,sigamos con,q0,con,q0,False
+A036,RETOMAR_TEMA,sigamos con,q0,sigamos,q1,False
+A036,RETOMAR_TEMA,sigamos con,q0,<OTRO>,q0,False
+A036,RETOMAR_TEMA,sigamos con,q1,con,q2,True
+A036,RETOMAR_TEMA,sigamos con,q1,sigamos,q1,False
+A036,RETOMAR_TEMA,sigamos con,q1,<OTRO>,q0,False
+A036,RETOMAR_TEMA,sigamos con,q2,con,q2,True
+A036,RETOMAR_TEMA,sigamos con,q2,sigamos,q2,True
+A036,RETOMAR_TEMA,sigamos con,q2,<OTRO>,q2,True
+A037,RETOMAR_TEMA,regresemos,q0,regresemos,q1,True
+A037,RETOMAR_TEMA,regresemos,q0,<OTRO>,q0,False
+A037,RETOMAR_TEMA,regresemos,q1,regresemos,q1,True
+A037,RETOMAR_TEMA,regresemos,q1,<OTRO>,q1,True
+A038,RETOMAR_TEMA,retomemos,q0,retomemos,q1,True
+A038,RETOMAR_TEMA,retomemos,q0,<OTRO>,q0,False
+A038,RETOMAR_TEMA,retomemos,q1,retomemos,q1,True
+A038,RETOMAR_TEMA,retomemos,q1,<OTRO>,q1,True
+A039,RETOMAR_TEMA,volvamos,q0,volvamos,q1,True
+A039,RETOMAR_TEMA,volvamos,q0,<OTRO>,q0,False
+A039,RETOMAR_TEMA,volvamos,q1,volvamos,q1,True
+A039,RETOMAR_TEMA,volvamos,q1,<OTRO>,q1,True
+A040,RETOMAR_TEMA,ese tema,q0,ese,q1,False
+A040,RETOMAR_TEMA,ese tema,q0,tema,q0,False
+A040,RETOMAR_TEMA,ese tema,q0,<OTRO>,q0,False
+A040,RETOMAR_TEMA,ese tema,q1,ese,q1,False
+A040,RETOMAR_TEMA,ese tema,q1,tema,q2,True
+A040,RETOMAR_TEMA,ese tema,q1,<OTRO>,q0,False
+A040,RETOMAR_TEMA,ese tema,q2,ese,q2,True
+A040,RETOMAR_TEMA,ese tema,q2,tema,q2,True
+A040,RETOMAR_TEMA,ese tema,q2,<OTRO>,q2,True
+A041,MENCION_PELICULA,el senor de los anillos,q0,anillos,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q0,de,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q0,el,q1,False
+A041,MENCION_PELICULA,el senor de los anillos,q0,los,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q0,senor,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q0,<OTRO>,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q1,anillos,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q1,de,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q1,el,q1,False
+A041,MENCION_PELICULA,el senor de los anillos,q1,los,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q1,senor,q2,False
+A041,MENCION_PELICULA,el senor de los anillos,q1,<OTRO>,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q2,anillos,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q2,de,q3,False
+A041,MENCION_PELICULA,el senor de los anillos,q2,el,q1,False
+A041,MENCION_PELICULA,el senor de los anillos,q2,los,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q2,senor,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q2,<OTRO>,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q3,anillos,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q3,de,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q3,el,q1,False
+A041,MENCION_PELICULA,el senor de los anillos,q3,los,q4,False
+A041,MENCION_PELICULA,el senor de los anillos,q3,senor,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q3,<OTRO>,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q4,anillos,q5,True
+A041,MENCION_PELICULA,el senor de los anillos,q4,de,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q4,el,q1,False
+A041,MENCION_PELICULA,el senor de los anillos,q4,los,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q4,senor,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q4,<OTRO>,q0,False
+A041,MENCION_PELICULA,el senor de los anillos,q5,anillos,q5,True
+A041,MENCION_PELICULA,el senor de los anillos,q5,de,q5,True
+A041,MENCION_PELICULA,el senor de los anillos,q5,el,q5,True
+A041,MENCION_PELICULA,el senor de los anillos,q5,los,q5,True
+A041,MENCION_PELICULA,el senor de los anillos,q5,senor,q5,True
+A041,MENCION_PELICULA,el senor de los anillos,q5,<OTRO>,q5,True
+A042,MENCION_PELICULA,jurassic park,q0,jurassic,q1,False
+A042,MENCION_PELICULA,jurassic park,q0,park,q0,False
+A042,MENCION_PELICULA,jurassic park,q0,<OTRO>,q0,False
+A042,MENCION_PELICULA,jurassic park,q1,jurassic,q1,False
+A042,MENCION_PELICULA,jurassic park,q1,park,q2,True
+A042,MENCION_PELICULA,jurassic park,q1,<OTRO>,q0,False
+A042,MENCION_PELICULA,jurassic park,q2,jurassic,q2,True
+A042,MENCION_PELICULA,jurassic park,q2,park,q2,True
+A042,MENCION_PELICULA,jurassic park,q2,<OTRO>,q2,True
+A043,MENCION_PELICULA,interestelar,q0,interestelar,q1,True
+A043,MENCION_PELICULA,interestelar,q0,<OTRO>,q0,False
+A043,MENCION_PELICULA,interestelar,q1,interestelar,q1,True
+A043,MENCION_PELICULA,interestelar,q1,<OTRO>,q1,True
+A044,MENCION_PELICULA,interstellar,q0,interstellar,q1,True
+A044,MENCION_PELICULA,interstellar,q0,<OTRO>,q0,False
+A044,MENCION_PELICULA,interstellar,q1,interstellar,q1,True
+A044,MENCION_PELICULA,interstellar,q1,<OTRO>,q1,True
+A045,MENCION_PELICULA,pulp fiction,q0,fiction,q0,False
+A045,MENCION_PELICULA,pulp fiction,q0,pulp,q1,False
+A045,MENCION_PELICULA,pulp fiction,q0,<OTRO>,q0,False
+A045,MENCION_PELICULA,pulp fiction,q1,fiction,q2,True
+A045,MENCION_PELICULA,pulp fiction,q1,pulp,q1,False
+A045,MENCION_PELICULA,pulp fiction,q1,<OTRO>,q0,False
+A045,MENCION_PELICULA,pulp fiction,q2,fiction,q2,True
+A045,MENCION_PELICULA,pulp fiction,q2,pulp,q2,True
+A045,MENCION_PELICULA,pulp fiction,q2,<OTRO>,q2,True
+A046,MENCION_PELICULA,harry potter,q0,harry,q1,False
+A046,MENCION_PELICULA,harry potter,q0,potter,q0,False
+A046,MENCION_PELICULA,harry potter,q0,<OTRO>,q0,False
+A046,MENCION_PELICULA,harry potter,q1,harry,q1,False
+A046,MENCION_PELICULA,harry potter,q1,potter,q2,True
+A046,MENCION_PELICULA,harry potter,q1,<OTRO>,q0,False
+A046,MENCION_PELICULA,harry potter,q2,harry,q2,True
+A046,MENCION_PELICULA,harry potter,q2,potter,q2,True
+A046,MENCION_PELICULA,harry potter,q2,<OTRO>,q2,True
+A047,MENCION_PELICULA,forrest gump,q0,forrest,q1,False
+A047,MENCION_PELICULA,forrest gump,q0,gump,q0,False
+A047,MENCION_PELICULA,forrest gump,q0,<OTRO>,q0,False
+A047,MENCION_PELICULA,forrest gump,q1,forrest,q1,False
+A047,MENCION_PELICULA,forrest gump,q1,gump,q2,True
+A047,MENCION_PELICULA,forrest gump,q1,<OTRO>,q0,False
+A047,MENCION_PELICULA,forrest gump,q2,forrest,q2,True
+A047,MENCION_PELICULA,forrest gump,q2,gump,q2,True
+A047,MENCION_PELICULA,forrest gump,q2,<OTRO>,q2,True
+A048,MENCION_PELICULA,oppenheimer,q0,oppenheimer,q1,True
+A048,MENCION_PELICULA,oppenheimer,q0,<OTRO>,q0,False
+A048,MENCION_PELICULA,oppenheimer,q1,oppenheimer,q1,True
+A048,MENCION_PELICULA,oppenheimer,q1,<OTRO>,q1,True
+A049,MENCION_PELICULA,el padrino,q0,el,q1,False
+A049,MENCION_PELICULA,el padrino,q0,padrino,q0,False
+A049,MENCION_PELICULA,el padrino,q0,<OTRO>,q0,False
+A049,MENCION_PELICULA,el padrino,q1,el,q1,False
+A049,MENCION_PELICULA,el padrino,q1,padrino,q2,True
+A049,MENCION_PELICULA,el padrino,q1,<OTRO>,q0,False
+A049,MENCION_PELICULA,el padrino,q2,el,q2,True
+A049,MENCION_PELICULA,el padrino,q2,padrino,q2,True
+A049,MENCION_PELICULA,el padrino,q2,<OTRO>,q2,True
+A050,MENCION_PELICULA,la la land,q0,la,q1,False
+A050,MENCION_PELICULA,la la land,q0,land,q0,False
+A050,MENCION_PELICULA,la la land,q0,<OTRO>,q0,False
+A050,MENCION_PELICULA,la la land,q1,la,q2,False
+A050,MENCION_PELICULA,la la land,q1,land,q0,False
+A050,MENCION_PELICULA,la la land,q1,<OTRO>,q0,False
+A050,MENCION_PELICULA,la la land,q2,la,q2,False
+A050,MENCION_PELICULA,la la land,q2,land,q3,True
+A050,MENCION_PELICULA,la la land,q2,<OTRO>,q0,False
+A050,MENCION_PELICULA,la la land,q3,la,q3,True
+A050,MENCION_PELICULA,la la land,q3,land,q3,True
+A050,MENCION_PELICULA,la la land,q3,<OTRO>,q3,True
+A051,MENCION_PELICULA,inception,q0,inception,q1,True
+A051,MENCION_PELICULA,inception,q0,<OTRO>,q0,False
+A051,MENCION_PELICULA,inception,q1,inception,q1,True
+A051,MENCION_PELICULA,inception,q1,<OTRO>,q1,True
+A052,MENCION_PELICULA,gladiador,q0,gladiador,q1,True
+A052,MENCION_PELICULA,gladiador,q0,<OTRO>,q0,False
+A052,MENCION_PELICULA,gladiador,q1,gladiador,q1,True
+A052,MENCION_PELICULA,gladiador,q1,<OTRO>,q1,True
+A053,MENCION_PELICULA,toy story,q0,story,q0,False
+A053,MENCION_PELICULA,toy story,q0,toy,q1,False
+A053,MENCION_PELICULA,toy story,q0,<OTRO>,q0,False
+A053,MENCION_PELICULA,toy story,q1,story,q2,True
+A053,MENCION_PELICULA,toy story,q1,toy,q1,False
+A053,MENCION_PELICULA,toy story,q1,<OTRO>,q0,False
+A053,MENCION_PELICULA,toy story,q2,story,q2,True
+A053,MENCION_PELICULA,toy story,q2,toy,q2,True
+A053,MENCION_PELICULA,toy story,q2,<OTRO>,q2,True
+A054,MENCION_PELICULA,star wars,q0,star,q1,False
+A054,MENCION_PELICULA,star wars,q0,wars,q0,False
+A054,MENCION_PELICULA,star wars,q0,<OTRO>,q0,False
+A054,MENCION_PELICULA,star wars,q1,star,q1,False
+A054,MENCION_PELICULA,star wars,q1,wars,q2,True
+A054,MENCION_PELICULA,star wars,q1,<OTRO>,q0,False
+A054,MENCION_PELICULA,star wars,q2,star,q2,True
+A054,MENCION_PELICULA,star wars,q2,wars,q2,True
+A054,MENCION_PELICULA,star wars,q2,<OTRO>,q2,True
+A055,MENCION_PELICULA,parasitos,q0,parasitos,q1,True
+A055,MENCION_PELICULA,parasitos,q0,<OTRO>,q0,False
+A055,MENCION_PELICULA,parasitos,q1,parasitos,q1,True
+A055,MENCION_PELICULA,parasitos,q1,<OTRO>,q1,True
+A056,MENCION_PELICULA,titanic,q0,titanic,q1,True
+A056,MENCION_PELICULA,titanic,q0,<OTRO>,q0,False
+A056,MENCION_PELICULA,titanic,q1,titanic,q1,True
+A056,MENCION_PELICULA,titanic,q1,<OTRO>,q1,True
+A057,MENCION_PELICULA,avatar,q0,avatar,q1,True
+A057,MENCION_PELICULA,avatar,q0,<OTRO>,q0,False
+A057,MENCION_PELICULA,avatar,q1,avatar,q1,True
+A057,MENCION_PELICULA,avatar,q1,<OTRO>,q1,True
+A058,MENCION_PELICULA,barbie,q0,barbie,q1,True
+A058,MENCION_PELICULA,barbie,q0,<OTRO>,q0,False
+A058,MENCION_PELICULA,barbie,q1,barbie,q1,True
+A058,MENCION_PELICULA,barbie,q1,<OTRO>,q1,True
+A059,MENCION_PELICULA,matrix,q0,matrix,q1,True
+A059,MENCION_PELICULA,matrix,q0,<OTRO>,q0,False
+A059,MENCION_PELICULA,matrix,q1,matrix,q1,True
+A059,MENCION_PELICULA,matrix,q1,<OTRO>,q1,True
+A060,MENCION_PELICULA,batman,q0,batman,q1,True
+A060,MENCION_PELICULA,batman,q0,<OTRO>,q0,False
+A060,MENCION_PELICULA,batman,q1,batman,q1,True
+A060,MENCION_PELICULA,batman,q1,<OTRO>,q1,True
+A061,MENCION_PELICULA,joker,q0,joker,q1,True
+A061,MENCION_PELICULA,joker,q0,<OTRO>,q0,False
+A061,MENCION_PELICULA,joker,q1,joker,q1,True
+A061,MENCION_PELICULA,joker,q1,<OTRO>,q1,True
+A062,MENCION_PELICULA,shrek,q0,shrek,q1,True
+A062,MENCION_PELICULA,shrek,q0,<OTRO>,q0,False
+A062,MENCION_PELICULA,shrek,q1,shrek,q1,True
+A062,MENCION_PELICULA,shrek,q1,<OTRO>,q1,True
+A063,MENCION_PELICULA,dune,q0,dune,q1,True
+A063,MENCION_PELICULA,dune,q0,<OTRO>,q0,False
+A063,MENCION_PELICULA,dune,q1,dune,q1,True
+A063,MENCION_PELICULA,dune,q1,<OTRO>,q1,True
+A064,MENCION_PELICULA,duna,q0,duna,q1,True
+A064,MENCION_PELICULA,duna,q0,<OTRO>,q0,False
+A064,MENCION_PELICULA,duna,q1,duna,q1,True
+A064,MENCION_PELICULA,duna,q1,<OTRO>,q1,True
+A065,MENCION_PELICULA,coco,q0,coco,q1,True
+A065,MENCION_PELICULA,coco,q0,<OTRO>,q0,False
+A065,MENCION_PELICULA,coco,q1,coco,q1,True
+A065,MENCION_PELICULA,coco,q1,<OTRO>,q1,True
+A066,MENCION_PELICULA,cars,q0,cars,q1,True
+A066,MENCION_PELICULA,cars,q0,<OTRO>,q0,False
+A066,MENCION_PELICULA,cars,q1,cars,q1,True
+A066,MENCION_PELICULA,cars,q1,<OTRO>,q1,True
+A067,MENCION_ACTOR,scarlett johansson,q0,johansson,q0,False
+A067,MENCION_ACTOR,scarlett johansson,q0,scarlett,q1,False
+A067,MENCION_ACTOR,scarlett johansson,q0,<OTRO>,q0,False
+A067,MENCION_ACTOR,scarlett johansson,q1,johansson,q2,True
+A067,MENCION_ACTOR,scarlett johansson,q1,scarlett,q1,False
+A067,MENCION_ACTOR,scarlett johansson,q1,<OTRO>,q0,False
+A067,MENCION_ACTOR,scarlett johansson,q2,johansson,q2,True
+A067,MENCION_ACTOR,scarlett johansson,q2,scarlett,q2,True
+A067,MENCION_ACTOR,scarlett johansson,q2,<OTRO>,q2,True
+A068,MENCION_ACTOR,leonardo dicaprio,q0,dicaprio,q0,False
+A068,MENCION_ACTOR,leonardo dicaprio,q0,leonardo,q1,False
+A068,MENCION_ACTOR,leonardo dicaprio,q0,<OTRO>,q0,False
+A068,MENCION_ACTOR,leonardo dicaprio,q1,dicaprio,q2,True
+A068,MENCION_ACTOR,leonardo dicaprio,q1,leonardo,q1,False
+A068,MENCION_ACTOR,leonardo dicaprio,q1,<OTRO>,q0,False
+A068,MENCION_ACTOR,leonardo dicaprio,q2,dicaprio,q2,True
+A068,MENCION_ACTOR,leonardo dicaprio,q2,leonardo,q2,True
+A068,MENCION_ACTOR,leonardo dicaprio,q2,<OTRO>,q2,True
+A069,MENCION_ACTOR,timothee chalamet,q0,chalamet,q0,False
+A069,MENCION_ACTOR,timothee chalamet,q0,timothee,q1,False
+A069,MENCION_ACTOR,timothee chalamet,q0,<OTRO>,q0,False
+A069,MENCION_ACTOR,timothee chalamet,q1,chalamet,q2,True
+A069,MENCION_ACTOR,timothee chalamet,q1,timothee,q1,False
+A069,MENCION_ACTOR,timothee chalamet,q1,<OTRO>,q0,False
+A069,MENCION_ACTOR,timothee chalamet,q2,chalamet,q2,True
+A069,MENCION_ACTOR,timothee chalamet,q2,timothee,q2,True
+A069,MENCION_ACTOR,timothee chalamet,q2,<OTRO>,q2,True
+A070,MENCION_ACTOR,robert downey jr,q0,downey,q0,False
+A070,MENCION_ACTOR,robert downey jr,q0,jr,q0,False
+A070,MENCION_ACTOR,robert downey jr,q0,robert,q1,False
+A070,MENCION_ACTOR,robert downey jr,q0,<OTRO>,q0,False
+A070,MENCION_ACTOR,robert downey jr,q1,downey,q2,False
+A070,MENCION_ACTOR,robert downey jr,q1,jr,q0,False
+A070,MENCION_ACTOR,robert downey jr,q1,robert,q1,False
+A070,MENCION_ACTOR,robert downey jr,q1,<OTRO>,q0,False
+A070,MENCION_ACTOR,robert downey jr,q2,downey,q0,False
+A070,MENCION_ACTOR,robert downey jr,q2,jr,q3,True
+A070,MENCION_ACTOR,robert downey jr,q2,robert,q1,False
+A070,MENCION_ACTOR,robert downey jr,q2,<OTRO>,q0,False
+A070,MENCION_ACTOR,robert downey jr,q3,downey,q3,True
+A070,MENCION_ACTOR,robert downey jr,q3,jr,q3,True
+A070,MENCION_ACTOR,robert downey jr,q3,robert,q3,True
+A070,MENCION_ACTOR,robert downey jr,q3,<OTRO>,q3,True
+A071,MENCION_ACTOR,joaquin phoenix,q0,joaquin,q1,False
+A071,MENCION_ACTOR,joaquin phoenix,q0,phoenix,q0,False
+A071,MENCION_ACTOR,joaquin phoenix,q0,<OTRO>,q0,False
+A071,MENCION_ACTOR,joaquin phoenix,q1,joaquin,q1,False
+A071,MENCION_ACTOR,joaquin phoenix,q1,phoenix,q2,True
+A071,MENCION_ACTOR,joaquin phoenix,q1,<OTRO>,q0,False
+A071,MENCION_ACTOR,joaquin phoenix,q2,joaquin,q2,True
+A071,MENCION_ACTOR,joaquin phoenix,q2,phoenix,q2,True
+A071,MENCION_ACTOR,joaquin phoenix,q2,<OTRO>,q2,True
+A072,MENCION_ACTOR,cillian murphy,q0,cillian,q1,False
+A072,MENCION_ACTOR,cillian murphy,q0,murphy,q0,False
+A072,MENCION_ACTOR,cillian murphy,q0,<OTRO>,q0,False
+A072,MENCION_ACTOR,cillian murphy,q1,cillian,q1,False
+A072,MENCION_ACTOR,cillian murphy,q1,murphy,q2,True
+A072,MENCION_ACTOR,cillian murphy,q1,<OTRO>,q0,False
+A072,MENCION_ACTOR,cillian murphy,q2,cillian,q2,True
+A072,MENCION_ACTOR,cillian murphy,q2,murphy,q2,True
+A072,MENCION_ACTOR,cillian murphy,q2,<OTRO>,q2,True
+A073,MENCION_ACTOR,christian bale,q0,bale,q0,False
+A073,MENCION_ACTOR,christian bale,q0,christian,q1,False
+A073,MENCION_ACTOR,christian bale,q0,<OTRO>,q0,False
+A073,MENCION_ACTOR,christian bale,q1,bale,q2,True
+A073,MENCION_ACTOR,christian bale,q1,christian,q1,False
+A073,MENCION_ACTOR,christian bale,q1,<OTRO>,q0,False
+A073,MENCION_ACTOR,christian bale,q2,bale,q2,True
+A073,MENCION_ACTOR,christian bale,q2,christian,q2,True
+A073,MENCION_ACTOR,christian bale,q2,<OTRO>,q2,True
+A074,MENCION_ACTOR,morgan freeman,q0,freeman,q0,False
+A074,MENCION_ACTOR,morgan freeman,q0,morgan,q1,False
+A074,MENCION_ACTOR,morgan freeman,q0,<OTRO>,q0,False
+A074,MENCION_ACTOR,morgan freeman,q1,freeman,q2,True
+A074,MENCION_ACTOR,morgan freeman,q1,morgan,q1,False
+A074,MENCION_ACTOR,morgan freeman,q1,<OTRO>,q0,False
+A074,MENCION_ACTOR,morgan freeman,q2,freeman,q2,True
+A074,MENCION_ACTOR,morgan freeman,q2,morgan,q2,True
+A074,MENCION_ACTOR,morgan freeman,q2,<OTRO>,q2,True
+A075,MENCION_ACTOR,margot robbie,q0,margot,q1,False
+A075,MENCION_ACTOR,margot robbie,q0,robbie,q0,False
+A075,MENCION_ACTOR,margot robbie,q0,<OTRO>,q0,False
+A075,MENCION_ACTOR,margot robbie,q1,margot,q1,False
+A075,MENCION_ACTOR,margot robbie,q1,robbie,q2,True
+A075,MENCION_ACTOR,margot robbie,q1,<OTRO>,q0,False
+A075,MENCION_ACTOR,margot robbie,q2,margot,q2,True
+A075,MENCION_ACTOR,margot robbie,q2,robbie,q2,True
+A075,MENCION_ACTOR,margot robbie,q2,<OTRO>,q2,True
+A076,MENCION_ACTOR,keanu reeves,q0,keanu,q1,False
+A076,MENCION_ACTOR,keanu reeves,q0,reeves,q0,False
+A076,MENCION_ACTOR,keanu reeves,q0,<OTRO>,q0,False
+A076,MENCION_ACTOR,keanu reeves,q1,keanu,q1,False
+A076,MENCION_ACTOR,keanu reeves,q1,reeves,q2,True
+A076,MENCION_ACTOR,keanu reeves,q1,<OTRO>,q0,False
+A076,MENCION_ACTOR,keanu reeves,q2,keanu,q2,True
+A076,MENCION_ACTOR,keanu reeves,q2,reeves,q2,True
+A076,MENCION_ACTOR,keanu reeves,q2,<OTRO>,q2,True
+A077,MENCION_ACTOR,johnny depp,q0,depp,q0,False
+A077,MENCION_ACTOR,johnny depp,q0,johnny,q1,False
+A077,MENCION_ACTOR,johnny depp,q0,<OTRO>,q0,False
+A077,MENCION_ACTOR,johnny depp,q1,depp,q2,True
+A077,MENCION_ACTOR,johnny depp,q1,johnny,q1,False
+A077,MENCION_ACTOR,johnny depp,q1,<OTRO>,q0,False
+A077,MENCION_ACTOR,johnny depp,q2,depp,q2,True
+A077,MENCION_ACTOR,johnny depp,q2,johnny,q2,True
+A077,MENCION_ACTOR,johnny depp,q2,<OTRO>,q2,True
+A078,MENCION_ACTOR,tom cruise,q0,cruise,q0,False
+A078,MENCION_ACTOR,tom cruise,q0,tom,q1,False
+A078,MENCION_ACTOR,tom cruise,q0,<OTRO>,q0,False
+A078,MENCION_ACTOR,tom cruise,q1,cruise,q2,True
+A078,MENCION_ACTOR,tom cruise,q1,tom,q1,False
+A078,MENCION_ACTOR,tom cruise,q1,<OTRO>,q0,False
+A078,MENCION_ACTOR,tom cruise,q2,cruise,q2,True
+A078,MENCION_ACTOR,tom cruise,q2,tom,q2,True
+A078,MENCION_ACTOR,tom cruise,q2,<OTRO>,q2,True
+A079,MENCION_ACTOR,emma stone,q0,emma,q1,False
+A079,MENCION_ACTOR,emma stone,q0,stone,q0,False
+A079,MENCION_ACTOR,emma stone,q0,<OTRO>,q0,False
+A079,MENCION_ACTOR,emma stone,q1,emma,q1,False
+A079,MENCION_ACTOR,emma stone,q1,stone,q2,True
+A079,MENCION_ACTOR,emma stone,q1,<OTRO>,q0,False
+A079,MENCION_ACTOR,emma stone,q2,emma,q2,True
+A079,MENCION_ACTOR,emma stone,q2,stone,q2,True
+A079,MENCION_ACTOR,emma stone,q2,<OTRO>,q2,True
+A080,MENCION_ACTOR,brad pitt,q0,brad,q1,False
+A080,MENCION_ACTOR,brad pitt,q0,pitt,q0,False
+A080,MENCION_ACTOR,brad pitt,q0,<OTRO>,q0,False
+A080,MENCION_ACTOR,brad pitt,q1,brad,q1,False
+A080,MENCION_ACTOR,brad pitt,q1,pitt,q2,True
+A080,MENCION_ACTOR,brad pitt,q1,<OTRO>,q0,False
+A080,MENCION_ACTOR,brad pitt,q2,brad,q2,True
+A080,MENCION_ACTOR,brad pitt,q2,pitt,q2,True
+A080,MENCION_ACTOR,brad pitt,q2,<OTRO>,q2,True
+A081,MENCION_ACTOR,tom hanks,q0,hanks,q0,False
+A081,MENCION_ACTOR,tom hanks,q0,tom,q1,False
+A081,MENCION_ACTOR,tom hanks,q0,<OTRO>,q0,False
+A081,MENCION_ACTOR,tom hanks,q1,hanks,q2,True
+A081,MENCION_ACTOR,tom hanks,q1,tom,q1,False
+A081,MENCION_ACTOR,tom hanks,q1,<OTRO>,q0,False
+A081,MENCION_ACTOR,tom hanks,q2,hanks,q2,True
+A081,MENCION_ACTOR,tom hanks,q2,tom,q2,True
+A081,MENCION_ACTOR,tom hanks,q2,<OTRO>,q2,True
+A082,MENCION_ACTOR,zendaya,q0,zendaya,q1,True
+A082,MENCION_ACTOR,zendaya,q0,<OTRO>,q0,False
+A082,MENCION_ACTOR,zendaya,q1,zendaya,q1,True
+A082,MENCION_ACTOR,zendaya,q1,<OTRO>,q1,True
+A083,MENCION_GENERO,ciencia ficcion,q0,ciencia,q1,False
+A083,MENCION_GENERO,ciencia ficcion,q0,ficcion,q0,False
+A083,MENCION_GENERO,ciencia ficcion,q0,<OTRO>,q0,False
+A083,MENCION_GENERO,ciencia ficcion,q1,ciencia,q1,False
+A083,MENCION_GENERO,ciencia ficcion,q1,ficcion,q2,True
+A083,MENCION_GENERO,ciencia ficcion,q1,<OTRO>,q0,False
+A083,MENCION_GENERO,ciencia ficcion,q2,ciencia,q2,True
+A083,MENCION_GENERO,ciencia ficcion,q2,ficcion,q2,True
+A083,MENCION_GENERO,ciencia ficcion,q2,<OTRO>,q2,True
+A084,MENCION_GENERO,documental,q0,documental,q1,True
+A084,MENCION_GENERO,documental,q0,<OTRO>,q0,False
+A084,MENCION_GENERO,documental,q1,documental,q1,True
+A084,MENCION_GENERO,documental,q1,<OTRO>,q1,True
+A085,MENCION_GENERO,animacion,q0,animacion,q1,True
+A085,MENCION_GENERO,animacion,q0,<OTRO>,q0,False
+A085,MENCION_GENERO,animacion,q1,animacion,q1,True
+A085,MENCION_GENERO,animacion,q1,<OTRO>,q1,True
+A086,MENCION_GENERO,aventura,q0,aventura,q1,True
+A086,MENCION_GENERO,aventura,q0,<OTRO>,q0,False
+A086,MENCION_GENERO,aventura,q1,aventura,q1,True
+A086,MENCION_GENERO,aventura,q1,<OTRO>,q1,True
+A087,MENCION_GENERO,suspenso,q0,suspenso,q1,True
+A087,MENCION_GENERO,suspenso,q0,<OTRO>,q0,False
+A087,MENCION_GENERO,suspenso,q1,suspenso,q1,True
+A087,MENCION_GENERO,suspenso,q1,<OTRO>,q1,True
+A088,MENCION_GENERO,fantasia,q0,fantasia,q1,True
+A088,MENCION_GENERO,fantasia,q0,<OTRO>,q0,False
+A088,MENCION_GENERO,fantasia,q1,fantasia,q1,True
+A088,MENCION_GENERO,fantasia,q1,<OTRO>,q1,True
+A089,MENCION_GENERO,misterio,q0,misterio,q1,True
+A089,MENCION_GENERO,misterio,q0,<OTRO>,q0,False
+A089,MENCION_GENERO,misterio,q1,misterio,q1,True
+A089,MENCION_GENERO,misterio,q1,<OTRO>,q1,True
+A090,MENCION_GENERO,thriller,q0,thriller,q1,True
+A090,MENCION_GENERO,thriller,q0,<OTRO>,q0,False
+A090,MENCION_GENERO,thriller,q1,thriller,q1,True
+A090,MENCION_GENERO,thriller,q1,<OTRO>,q1,True
+A091,MENCION_GENERO,comedia,q0,comedia,q1,True
+A091,MENCION_GENERO,comedia,q0,<OTRO>,q0,False
+A091,MENCION_GENERO,comedia,q1,comedia,q1,True
+A091,MENCION_GENERO,comedia,q1,<OTRO>,q1,True
+A092,MENCION_GENERO,romance,q0,romance,q1,True
+A092,MENCION_GENERO,romance,q0,<OTRO>,q0,False
+A092,MENCION_GENERO,romance,q1,romance,q1,True
+A092,MENCION_GENERO,romance,q1,<OTRO>,q1,True
+A093,MENCION_GENERO,musical,q0,musical,q1,True
+A093,MENCION_GENERO,musical,q0,<OTRO>,q0,False
+A093,MENCION_GENERO,musical,q1,musical,q1,True
+A093,MENCION_GENERO,musical,q1,<OTRO>,q1,True
+A094,MENCION_GENERO,western,q0,western,q1,True
+A094,MENCION_GENERO,western,q0,<OTRO>,q0,False
+A094,MENCION_GENERO,western,q1,western,q1,True
+A094,MENCION_GENERO,western,q1,<OTRO>,q1,True
+A095,MENCION_GENERO,accion,q0,accion,q1,True
+A095,MENCION_GENERO,accion,q0,<OTRO>,q0,False
+A095,MENCION_GENERO,accion,q1,accion,q1,True
+A095,MENCION_GENERO,accion,q1,<OTRO>,q1,True
+A096,MENCION_GENERO,terror,q0,terror,q1,True
+A096,MENCION_GENERO,terror,q0,<OTRO>,q0,False
+A096,MENCION_GENERO,terror,q1,terror,q1,True
+A096,MENCION_GENERO,terror,q1,<OTRO>,q1,True
+A097,MENCION_GENERO,horror,q0,horror,q1,True
+A097,MENCION_GENERO,horror,q0,<OTRO>,q0,False
+A097,MENCION_GENERO,horror,q1,horror,q1,True
+A097,MENCION_GENERO,horror,q1,<OTRO>,q1,True
+A098,MENCION_GENERO,crimen,q0,crimen,q1,True
+A098,MENCION_GENERO,crimen,q0,<OTRO>,q0,False
+A098,MENCION_GENERO,crimen,q1,crimen,q1,True
+A098,MENCION_GENERO,crimen,q1,<OTRO>,q1,True
+A099,MENCION_GENERO,drama,q0,drama,q1,True
+A099,MENCION_GENERO,drama,q0,<OTRO>,q0,False
+A099,MENCION_GENERO,drama,q1,drama,q1,True
+A099,MENCION_GENERO,drama,q1,<OTRO>,q1,True
+A100,OPINION,es excelente,q0,es,q1,False
+A100,OPINION,es excelente,q0,excelente,q0,False
+A100,OPINION,es excelente,q0,<OTRO>,q0,False
+A100,OPINION,es excelente,q1,es,q1,False
+A100,OPINION,es excelente,q1,excelente,q2,True
+A100,OPINION,es excelente,q1,<OTRO>,q0,False
+A100,OPINION,es excelente,q2,es,q2,True
+A100,OPINION,es excelente,q2,excelente,q2,True
+A100,OPINION,es excelente,q2,<OTRO>,q2,True
+A101,OPINION,es aburrida,q0,aburrida,q0,False
+A101,OPINION,es aburrida,q0,es,q1,False
+A101,OPINION,es aburrida,q0,<OTRO>,q0,False
+A101,OPINION,es aburrida,q1,aburrida,q2,True
+A101,OPINION,es aburrida,q1,es,q1,False
+A101,OPINION,es aburrida,q1,<OTRO>,q0,False
+A101,OPINION,es aburrida,q2,aburrida,q2,True
+A101,OPINION,es aburrida,q2,es,q2,True
+A101,OPINION,es aburrida,q2,<OTRO>,q2,True
+A102,OPINION,es terrible,q0,es,q1,False
+A102,OPINION,es terrible,q0,terrible,q0,False
+A102,OPINION,es terrible,q0,<OTRO>,q0,False
+A102,OPINION,es terrible,q1,es,q1,False
+A102,OPINION,es terrible,q1,terrible,q2,True
+A102,OPINION,es terrible,q1,<OTRO>,q0,False
+A102,OPINION,es terrible,q2,es,q2,True
+A102,OPINION,es terrible,q2,terrible,q2,True
+A102,OPINION,es terrible,q2,<OTRO>,q2,True
+A103,OPINION,me encanta,q0,encanta,q0,False
+A103,OPINION,me encanta,q0,me,q1,False
+A103,OPINION,me encanta,q0,<OTRO>,q0,False
+A103,OPINION,me encanta,q1,encanta,q2,True
+A103,OPINION,me encanta,q1,me,q1,False
+A103,OPINION,me encanta,q1,<OTRO>,q0,False
+A103,OPINION,me encanta,q2,encanta,q2,True
+A103,OPINION,me encanta,q2,me,q2,True
+A103,OPINION,me encanta,q2,<OTRO>,q2,True
+A104,OPINION,me fascina,q0,fascina,q0,False
+A104,OPINION,me fascina,q0,me,q1,False
+A104,OPINION,me fascina,q0,<OTRO>,q0,False
+A104,OPINION,me fascina,q1,fascina,q2,True
+A104,OPINION,me fascina,q1,me,q1,False
+A104,OPINION,me fascina,q1,<OTRO>,q0,False
+A104,OPINION,me fascina,q2,fascina,q2,True
+A104,OPINION,me fascina,q2,me,q2,True
+A104,OPINION,me fascina,q2,<OTRO>,q2,True
+A105,OPINION,pienso que,q0,pienso,q1,False
+A105,OPINION,pienso que,q0,que,q0,False
+A105,OPINION,pienso que,q0,<OTRO>,q0,False
+A105,OPINION,pienso que,q1,pienso,q1,False
+A105,OPINION,pienso que,q1,que,q2,True
+A105,OPINION,pienso que,q1,<OTRO>,q0,False
+A105,OPINION,pienso que,q2,pienso,q2,True
+A105,OPINION,pienso que,q2,que,q2,True
+A105,OPINION,pienso que,q2,<OTRO>,q2,True
+A106,OPINION,me parece,q0,me,q1,False
+A106,OPINION,me parece,q0,parece,q0,False
+A106,OPINION,me parece,q0,<OTRO>,q0,False
+A106,OPINION,me parece,q1,me,q1,False
+A106,OPINION,me parece,q1,parece,q2,True
+A106,OPINION,me parece,q1,<OTRO>,q0,False
+A106,OPINION,me parece,q2,me,q2,True
+A106,OPINION,me parece,q2,parece,q2,True
+A106,OPINION,me parece,q2,<OTRO>,q2,True
+A107,OPINION,considero,q0,considero,q1,True
+A107,OPINION,considero,q0,<OTRO>,q0,False
+A107,OPINION,considero,q1,considero,q1,True
+A107,OPINION,considero,q1,<OTRO>,q1,True
+A108,OPINION,es genial,q0,es,q1,False
+A108,OPINION,es genial,q0,genial,q0,False
+A108,OPINION,es genial,q0,<OTRO>,q0,False
+A108,OPINION,es genial,q1,es,q1,False
+A108,OPINION,es genial,q1,genial,q2,True
+A108,OPINION,es genial,q1,<OTRO>,q0,False
+A108,OPINION,es genial,q2,es,q2,True
+A108,OPINION,es genial,q2,genial,q2,True
+A108,OPINION,es genial,q2,<OTRO>,q2,True
+A109,OPINION,me gusta,q0,gusta,q0,False
+A109,OPINION,me gusta,q0,me,q1,False
+A109,OPINION,me gusta,q0,<OTRO>,q0,False
+A109,OPINION,me gusta,q1,gusta,q2,True
+A109,OPINION,me gusta,q1,me,q1,False
+A109,OPINION,me gusta,q1,<OTRO>,q0,False
+A109,OPINION,me gusta,q2,gusta,q2,True
+A109,OPINION,me gusta,q2,me,q2,True
+A109,OPINION,me gusta,q2,<OTRO>,q2,True
+A110,OPINION,prefiero,q0,prefiero,q1,True
+A110,OPINION,prefiero,q0,<OTRO>,q0,False
+A110,OPINION,prefiero,q1,prefiero,q1,True
+A110,OPINION,prefiero,q1,<OTRO>,q1,True
+A111,OPINION,la mejor,q0,la,q1,False
+A111,OPINION,la mejor,q0,mejor,q0,False
+A111,OPINION,la mejor,q0,<OTRO>,q0,False
+A111,OPINION,la mejor,q1,la,q1,False
+A111,OPINION,la mejor,q1,mejor,q2,True
+A111,OPINION,la mejor,q1,<OTRO>,q0,False
+A111,OPINION,la mejor,q2,la,q2,True
+A111,OPINION,la mejor,q2,mejor,q2,True
+A111,OPINION,la mejor,q2,<OTRO>,q2,True
+A112,OPINION,creo que,q0,creo,q1,False
+A112,OPINION,creo que,q0,que,q0,False
+A112,OPINION,creo que,q0,<OTRO>,q0,False
+A112,OPINION,creo que,q1,creo,q1,False
+A112,OPINION,creo que,q1,que,q2,True
+A112,OPINION,creo que,q1,<OTRO>,q0,False
+A112,OPINION,creo que,q2,creo,q2,True
+A112,OPINION,creo que,q2,que,q2,True
+A112,OPINION,creo que,q2,<OTRO>,q2,True
+A113,OPINION,es buena,q0,buena,q0,False
+A113,OPINION,es buena,q0,es,q1,False
+A113,OPINION,es buena,q0,<OTRO>,q0,False
+A113,OPINION,es buena,q1,buena,q2,True
+A113,OPINION,es buena,q1,es,q1,False
+A113,OPINION,es buena,q1,<OTRO>,q0,False
+A113,OPINION,es buena,q2,buena,q2,True
+A113,OPINION,es buena,q2,es,q2,True
+A113,OPINION,es buena,q2,<OTRO>,q2,True
+A114,OPINION,para mi,q0,mi,q0,False
+A114,OPINION,para mi,q0,para,q1,False
+A114,OPINION,para mi,q0,<OTRO>,q0,False
+A114,OPINION,para mi,q1,mi,q2,True
+A114,OPINION,para mi,q1,para,q1,False
+A114,OPINION,para mi,q1,<OTRO>,q0,False
+A114,OPINION,para mi,q2,mi,q2,True
+A114,OPINION,para mi,q2,para,q2,True
+A114,OPINION,para mi,q2,<OTRO>,q2,True
+A115,OPINION,es mala,q0,es,q1,False
+A115,OPINION,es mala,q0,mala,q0,False
+A115,OPINION,es mala,q0,<OTRO>,q0,False
+A115,OPINION,es mala,q1,es,q1,False
+A115,OPINION,es mala,q1,mala,q2,True
+A115,OPINION,es mala,q1,<OTRO>,q0,False
+A115,OPINION,es mala,q2,es,q2,True
+A115,OPINION,es mala,q2,mala,q2,True
+A115,OPINION,es mala,q2,<OTRO>,q2,True
+A116,OPINION,opino,q0,opino,q1,True
+A116,OPINION,opino,q0,<OTRO>,q0,False
+A116,OPINION,opino,q1,opino,q1,True
+A116,OPINION,opino,q1,<OTRO>,q1,True
+A117,OPINION,odio,q0,odio,q1,True
+A117,OPINION,odio,q0,<OTRO>,q0,False
+A117,OPINION,odio,q1,odio,q1,True
+A117,OPINION,odio,q1,<OTRO>,q1,True
+A118,NEGACION,para nada,q0,nada,q0,False
+A118,NEGACION,para nada,q0,para,q1,False
+A118,NEGACION,para nada,q0,<OTRO>,q0,False
+A118,NEGACION,para nada,q1,nada,q2,True
+A118,NEGACION,para nada,q1,para,q1,False
+A118,NEGACION,para nada,q1,<OTRO>,q0,False
+A118,NEGACION,para nada,q2,nada,q2,True
+A118,NEGACION,para nada,q2,para,q2,True
+A118,NEGACION,para nada,q2,<OTRO>,q2,True
+A119,NEGACION,negativo,q0,negativo,q1,True
+A119,NEGACION,negativo,q0,<OTRO>,q0,False
+A119,NEGACION,negativo,q1,negativo,q1,True
+A119,NEGACION,negativo,q1,<OTRO>,q1,True
+A120,NEGACION,no creo,q0,creo,q0,False
+A120,NEGACION,no creo,q0,no,q1,False
+A120,NEGACION,no creo,q0,<OTRO>,q0,False
+A120,NEGACION,no creo,q1,creo,q2,True
+A120,NEGACION,no creo,q1,no,q1,False
+A120,NEGACION,no creo,q1,<OTRO>,q0,False
+A120,NEGACION,no creo,q2,creo,q2,True
+A120,NEGACION,no creo,q2,no,q2,True
+A120,NEGACION,no creo,q2,<OTRO>,q2,True
+A121,NEGACION,nunca,q0,nunca,q1,True
+A121,NEGACION,nunca,q0,<OTRO>,q0,False
+A121,NEGACION,nunca,q1,nunca,q1,True
+A121,NEGACION,nunca,q1,<OTRO>,q1,True
+A122,NEGACION,jamas,q0,jamas,q1,True
+A122,NEGACION,jamas,q0,<OTRO>,q0,False
+A122,NEGACION,jamas,q1,jamas,q1,True
+A122,NEGACION,jamas,q1,<OTRO>,q1,True
+A123,NEGACION,no,q0,no,q1,True
+A123,NEGACION,no,q0,<OTRO>,q0,False
+A123,NEGACION,no,q1,no,q1,True
+A123,NEGACION,no,q1,<OTRO>,q1,True
+A124,AFIRMACION,por supuesto,q0,por,q1,False
+A124,AFIRMACION,por supuesto,q0,supuesto,q0,False
+A124,AFIRMACION,por supuesto,q0,<OTRO>,q0,False
+A124,AFIRMACION,por supuesto,q1,por,q1,False
+A124,AFIRMACION,por supuesto,q1,supuesto,q2,True
+A124,AFIRMACION,por supuesto,q1,<OTRO>,q0,False
+A124,AFIRMACION,por supuesto,q2,por,q2,True
+A124,AFIRMACION,por supuesto,q2,supuesto,q2,True
+A124,AFIRMACION,por supuesto,q2,<OTRO>,q2,True
+A125,AFIRMACION,de acuerdo,q0,acuerdo,q0,False
+A125,AFIRMACION,de acuerdo,q0,de,q1,False
+A125,AFIRMACION,de acuerdo,q0,<OTRO>,q0,False
+A125,AFIRMACION,de acuerdo,q1,acuerdo,q2,True
+A125,AFIRMACION,de acuerdo,q1,de,q1,False
+A125,AFIRMACION,de acuerdo,q1,<OTRO>,q0,False
+A125,AFIRMACION,de acuerdo,q2,acuerdo,q2,True
+A125,AFIRMACION,de acuerdo,q2,de,q2,True
+A125,AFIRMACION,de acuerdo,q2,<OTRO>,q2,True
+A126,AFIRMACION,totalmente,q0,totalmente,q1,True
+A126,AFIRMACION,totalmente,q0,<OTRO>,q0,False
+A126,AFIRMACION,totalmente,q1,totalmente,q1,True
+A126,AFIRMACION,totalmente,q1,<OTRO>,q1,True
+A127,AFIRMACION,correcto,q0,correcto,q1,True
+A127,AFIRMACION,correcto,q0,<OTRO>,q0,False
+A127,AFIRMACION,correcto,q1,correcto,q1,True
+A127,AFIRMACION,correcto,q1,<OTRO>,q1,True
+A128,AFIRMACION,tambien,q0,tambien,q1,True
+A128,AFIRMACION,tambien,q0,<OTRO>,q0,False
+A128,AFIRMACION,tambien,q1,tambien,q1,True
+A128,AFIRMACION,tambien,q1,<OTRO>,q1,True
+A129,AFIRMACION,exacto,q0,exacto,q1,True
+A129,AFIRMACION,exacto,q0,<OTRO>,q0,False
+A129,AFIRMACION,exacto,q1,exacto,q1,True
+A129,AFIRMACION,exacto,q1,<OTRO>,q1,True
+A130,AFIRMACION,asi es,q0,asi,q1,False
+A130,AFIRMACION,asi es,q0,es,q0,False
+A130,AFIRMACION,asi es,q0,<OTRO>,q0,False
+A130,AFIRMACION,asi es,q1,asi,q1,False
+A130,AFIRMACION,asi es,q1,es,q2,True
+A130,AFIRMACION,asi es,q1,<OTRO>,q0,False
+A130,AFIRMACION,asi es,q2,asi,q2,True
+A130,AFIRMACION,asi es,q2,es,q2,True
+A130,AFIRMACION,asi es,q2,<OTRO>,q2,True
+A131,AFIRMACION,claro,q0,claro,q1,True
+A131,AFIRMACION,claro,q0,<OTRO>,q0,False
+A131,AFIRMACION,claro,q1,claro,q1,True
+A131,AFIRMACION,claro,q1,<OTRO>,q1,True
+A132,AFIRMACION,si,q0,si,q1,True
+A132,AFIRMACION,si,q0,<OTRO>,q0,False
+A132,AFIRMACION,si,q1,si,q1,True
+A132,AFIRMACION,si,q1,<OTRO>,q1,True
+A133,PREGUNTA,?,q0,?,q1,True
+A133,PREGUNTA,?,q0,<OTRO>,q0,False
+A133,PREGUNTA,?,q1,?,q1,True
+A133,PREGUNTA,?,q1,<OTRO>,q1,True
+A134,PREGUNTA,¿,q0,¿,q1,True
+A134,PREGUNTA,¿,q0,<OTRO>,q0,False
+A134,PREGUNTA,¿,q1,¿,q1,True
+A134,PREGUNTA,¿,q1,<OTRO>,q1,True
+A135,PREGUNTA,que,q0,que,q1,True
+A135,PREGUNTA,que,q0,<OTRO>,q0,False
+A135,PREGUNTA,que,q1,que,q1,True
+A135,PREGUNTA,que,q1,<OTRO>,q1,True
+A136,PREGUNTA,quien,q0,quien,q1,True
+A136,PREGUNTA,quien,q0,<OTRO>,q0,False
+A136,PREGUNTA,quien,q1,quien,q1,True
+A136,PREGUNTA,quien,q1,<OTRO>,q1,True
+A137,PREGUNTA,quienes,q0,quienes,q1,True
+A137,PREGUNTA,quienes,q0,<OTRO>,q0,False
+A137,PREGUNTA,quienes,q1,quienes,q1,True
+A137,PREGUNTA,quienes,q1,<OTRO>,q1,True
+A138,PREGUNTA,cual,q0,cual,q1,True
+A138,PREGUNTA,cual,q0,<OTRO>,q0,False
+A138,PREGUNTA,cual,q1,cual,q1,True
+A138,PREGUNTA,cual,q1,<OTRO>,q1,True
+A139,PREGUNTA,cuales,q0,cuales,q1,True
+A139,PREGUNTA,cuales,q0,<OTRO>,q0,False
+A139,PREGUNTA,cuales,q1,cuales,q1,True
+A139,PREGUNTA,cuales,q1,<OTRO>,q1,True
+A140,PREGUNTA,como,q0,como,q1,True
+A140,PREGUNTA,como,q0,<OTRO>,q0,False
+A140,PREGUNTA,como,q1,como,q1,True
+A140,PREGUNTA,como,q1,<OTRO>,q1,True
+A141,PREGUNTA,cuando,q0,cuando,q1,True
+A141,PREGUNTA,cuando,q0,<OTRO>,q0,False
+A141,PREGUNTA,cuando,q1,cuando,q1,True
+A141,PREGUNTA,cuando,q1,<OTRO>,q1,True
+A142,PREGUNTA,donde,q0,donde,q1,True
+A142,PREGUNTA,donde,q0,<OTRO>,q0,False
+A142,PREGUNTA,donde,q1,donde,q1,True
+A142,PREGUNTA,donde,q1,<OTRO>,q1,True
+A143,PREGUNTA,por que,q0,por,q1,False
+A143,PREGUNTA,por que,q0,que,q0,False
+A143,PREGUNTA,por que,q0,<OTRO>,q0,False
+A143,PREGUNTA,por que,q1,por,q1,False
+A143,PREGUNTA,por que,q1,que,q2,True
+A143,PREGUNTA,por que,q1,<OTRO>,q0,False
+A143,PREGUNTA,por que,q2,por,q2,True
+A143,PREGUNTA,por que,q2,que,q2,True
+A143,PREGUNTA,por que,q2,<OTRO>,q2,True
+A144,PREGUNTA,porque,q0,porque,q1,True
+A144,PREGUNTA,porque,q0,<OTRO>,q0,False
+A144,PREGUNTA,porque,q1,porque,q1,True
+A144,PREGUNTA,porque,q1,<OTRO>,q1,True
+A145,PREGUNTA,cuanto,q0,cuanto,q1,True
+A145,PREGUNTA,cuanto,q0,<OTRO>,q0,False
+A145,PREGUNTA,cuanto,q1,cuanto,q1,True
+A145,PREGUNTA,cuanto,q1,<OTRO>,q1,True
+A146,PREGUNTA,cuantos,q0,cuantos,q1,True
+A146,PREGUNTA,cuantos,q0,<OTRO>,q0,False
+A146,PREGUNTA,cuantos,q1,cuantos,q1,True
+A146,PREGUNTA,cuantos,q1,<OTRO>,q1,True
+A147,PREGUNTA,cuanta,q0,cuanta,q1,True
+A147,PREGUNTA,cuanta,q0,<OTRO>,q0,False
+A147,PREGUNTA,cuanta,q1,cuanta,q1,True
+A147,PREGUNTA,cuanta,q1,<OTRO>,q1,True
+A148,PREGUNTA,cuantas,q0,cuantas,q1,True
+A148,PREGUNTA,cuantas,q0,<OTRO>,q0,False
+A148,PREGUNTA,cuantas,q1,cuantas,q1,True
+A148,PREGUNTA,cuantas,q1,<OTRO>,q1,True
+A149,MENCION_PELICULA,pelicula,q0,pelicula,q1,True
+A149,MENCION_PELICULA,pelicula,q0,<OTRO>,q0,False
+A149,MENCION_PELICULA,pelicula,q1,pelicula,q1,True
+A149,MENCION_PELICULA,pelicula,q1,<OTRO>,q1,True
+A150,MENCION_PELICULA,filme,q0,filme,q1,True
+A150,MENCION_PELICULA,filme,q0,<OTRO>,q0,False
+A150,MENCION_PELICULA,filme,q1,filme,q1,True
+A150,MENCION_PELICULA,filme,q1,<OTRO>,q1,True
+A151,MENCION_PELICULA,movie,q0,movie,q1,True
+A151,MENCION_PELICULA,movie,q0,<OTRO>,q0,False
+A151,MENCION_PELICULA,movie,q1,movie,q1,True
+A151,MENCION_PELICULA,movie,q1,<OTRO>,q1,True
+A152,MENCION_PELICULA,peli,q0,peli,q1,True
+A152,MENCION_PELICULA,peli,q0,<OTRO>,q0,False
+A152,MENCION_PELICULA,peli,q1,peli,q1,True
+A152,MENCION_PELICULA,peli,q1,<OTRO>,q1,True
+A153,MENCION_ACTOR,protagonista,q0,protagonista,q1,True
+A153,MENCION_ACTOR,protagonista,q0,<OTRO>,q0,False
+A153,MENCION_ACTOR,protagonista,q1,protagonista,q1,True
+A153,MENCION_ACTOR,protagonista,q1,<OTRO>,q1,True
+A154,MENCION_ACTOR,dirigida por,q0,dirigida,q1,False
+A154,MENCION_ACTOR,dirigida por,q0,por,q0,False
+A154,MENCION_ACTOR,dirigida por,q0,<OTRO>,q0,False
+A154,MENCION_ACTOR,dirigida por,q1,dirigida,q1,False
+A154,MENCION_ACTOR,dirigida por,q1,por,q2,True
+A154,MENCION_ACTOR,dirigida por,q1,<OTRO>,q0,False
+A154,MENCION_ACTOR,dirigida por,q2,dirigida,q2,True
+A154,MENCION_ACTOR,dirigida por,q2,por,q2,True
+A154,MENCION_ACTOR,dirigida por,q2,<OTRO>,q2,True
+A155,MENCION_ACTOR,actriz,q0,actriz,q1,True
+A155,MENCION_ACTOR,actriz,q0,<OTRO>,q0,False
+A155,MENCION_ACTOR,actriz,q1,actriz,q1,True
+A155,MENCION_ACTOR,actriz,q1,<OTRO>,q1,True
+A156,MENCION_ACTOR,actor,q0,actor,q1,True
+A156,MENCION_ACTOR,actor,q0,<OTRO>,q0,False
+A156,MENCION_ACTOR,actor,q1,actor,q1,True
+A156,MENCION_ACTOR,actor,q1,<OTRO>,q1,True
