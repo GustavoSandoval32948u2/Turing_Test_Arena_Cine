@@ -1,60 +1,98 @@
+
 # ============================================
-# CHATBOT PRINCIPAL - INTEGRACIÓN
+# CHATBOT PRINCIPAL - INTEGRACION
 # Responsable: Gustavo Sandoval
 # Tema: Cine
 # ============================================
 
-from definiciones import ESTADO_INICIAL
+import random
 
-# Estas importaciones las usarán tus compañeros cuando entreguen su código
-# from afd.clasificador import ClasificadorAFD
-# from afn.dialogo import MotorAFN
-# from pila.contexto import PilaContexto
-# from plantillas.banco import BancoPlantillas
+from definiciones import ESTADO_INICIAL, TRANSICIONES
+from afd.clasificador import ClasificadorAFD
+from pila.contexto import PilaContexto
+from plantillas.banco import BancoPlantillas
+
 
 class ChatbotCine:
-    def __init__(self):
+    def __init__(self, semilla=None):
         self.estado_actual = ESTADO_INICIAL
-        
-        # Aquí se conectarán los módulos de tus compañeros:
-        # self.clasificador = ClasificadorAFD()
-        # self.motor_afn = MotorAFN()
-        # self.pila = PilaContexto()
-        # self.plantillas = BancoPlantillas()
+
+        self.clasificador = ClasificadorAFD()
+        self.pila = PilaContexto()
+        self.plantillas = BancoPlantillas(semilla)
+
+        self.aleatorio = random.Random(semilla)
 
         print("Chatbot de Cine - Arquitectura lista")
         print(f"Estado inicial: {self.estado_actual}")
         print("-" * 50)
 
     def procesar_entrada(self, texto_usuario: str) -> str:
-        """
-        Flujo oficial del sistema (esto es lo que debes poder explicar):
-        
-        1. texto_usuario
-        2. → AFD (clasificación) → token
-        3. → AFN (transición) → nuevo estado
-        4. → Pila (push / pop / peek)
-        5. → Banco de plantillas → respuesta
-        """
-        
-        # --- 1. Clasificación léxica (Edin) ---
-        # token = self.clasificador.clasificar(texto_usuario)
-        token = "DESCONOCIDO"  # temporal hasta que Edin entregue
+        # 1. Clasificacion lexica mediante el AFD
+        resultado = self.clasificador.clasificar_detallado(
+            texto_usuario
+        )
+        token = resultado.token
+        entidad = resultado.entidad
 
-        # --- 2. Transición de estado (Gencer) ---
-        # nuevo_estado, acciones_pila = self.motor_afn.transicionar(self.estado_actual, token)
-        # self.estado_actual = nuevo_estado
-        nuevo_estado = self.estado_actual  # temporal
+        print(f"[AFD] Token: {token}")
+        if entidad:
+            print(f"[AFD] Entidad detectada: {entidad}")
 
-        # --- 3. Actualizar pila (Gencer) ---
-        # for accion in acciones_pila:
-        #     if accion["tipo"] == "push":
-        #         self.pila.push(accion["valor"])
-        #     elif accion["tipo"] == "pop":
-        #         self.pila.pop()
+        # 2. Transicion provisional basada en las definiciones.
+        # Se sustituira por MotorAFN cuando Gencer entregue el modulo.
+        estado_anterior = self.estado_actual
+        posibles = TRANSICIONES.get(
+            (estado_anterior, token), []
+        )
 
-        # --- 4. Generar respuesta (Daniel) ---
-        # respuesta = self.plantillas.obtener(self.estado_actual, self.pila)
-        respuesta = f"[Estado actual: {self.estado_actual}] Respuesta temporal"
+        if posibles:
+            nuevo_estado = self.aleatorio.choice(posibles)
+        elif token == "DESPEDIDA":
+            nuevo_estado = "DESPEDIDA"
+        elif token == "SALUDO":
+            nuevo_estado = "SALUDANDO"
+        elif token.startswith("MENCION_"):
+            nuevo_estado = {
+                "MENCION_PELICULA": "HABLANDO_PELICULA",
+                "MENCION_ACTOR": "HABLANDO_ACTOR",
+                "MENCION_GENERO": "HABLANDO_GENERO",
+            }.get(token, "CONVERSANDO")
+        elif token == "OPINION":
+            nuevo_estado = "OPINANDO"
+        elif token == "PREGUNTA":
+            nuevo_estado = "PREGUNTANDO"
+        elif token == "PROVOCACION":
+            nuevo_estado = "PROVOCADO"
+        else:
+            nuevo_estado = "CONVERSANDO"
+
+        self.estado_actual = nuevo_estado
+        print(
+            f"[DIALOGO PROVISIONAL] "
+            f"{estado_anterior} -> {self.estado_actual}"
+        )
+
+        # 3. Actualizacion de la pila de contexto
+        if token in (
+            "MENCION_PELICULA",
+            "MENCION_ACTOR",
+            "MENCION_GENERO",
+        ) and entidad:
+            tema_actual = self.pila.peek()
+
+            if tema_actual != entidad:
+                self.pila.push(entidad)
+
+        elif token == "RETOMAR_TEMA":
+            entidad = self.pila.peek()
+
+        # 4. Generacion de respuesta
+        respuesta = self.plantillas.obtener(
+            self.estado_actual,
+            self.pila,
+            token=token,
+            entidad=entidad,
+        )
 
         return respuesta
