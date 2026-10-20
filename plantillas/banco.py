@@ -1,336 +1,438 @@
 
 import random
 import re
+import unicodedata
 from typing import Optional
 
 
 class BancoPlantillas:
-    """
-    Banco de respuestas predeterminadas para el chatbot de cine.
+    """Banco de respuestas predeterminadas para el chatbot de cine."""
 
-    Responsabilidades:
-    - Guardar respuestas organizadas por estado.
-    - Seleccionar respuestas de forma aleatoria.
-    - Personalizar respuestas con películas, actores y géneros.
-    - Recuperar el tema actual desde la pila de contexto.
-    - Evitar respuestas vacías o errores de formato.
-    - Facilitar pruebas y futuras integraciones con el AFN.
-
-    No utiliza inteligencia artificial generativa.
-    """
-
-    TEMA_PREDETERMINADO = "ese tema"
+    TEMA_PREDETERMINADO = "el cine"
 
     PLANTILLAS = {
         "INICIO": [
-            "¡Hola! Me gusta conversar sobre cine. ¿Qué película te interesa?",
-            "¡Bienvenido! Podemos hablar de películas, actores y géneros.",
-            "¡Hola! ¿Tienes alguna película favorita?",
-            "¡Qué gusto tenerte aquí! ¿Qué te gustaría conversar sobre cine?",
+            "¡Hola! ¿Qué película te gustaría comentar?",
+            "¡Bienvenido al cine! ¿Qué historia te ha gustado últimamente?",
+            "¡Buenas! ¿Prefieres las películas clásicas o modernas?",
+            "¡Qué gusto! ¿Qué actor o actriz admiras?",
+            "¡Hola! ¿Cuál es tu género cinematográfico favorito?",
+            "¡Bienvenido! ¿Qué película recomendarías?",
         ],
-
         "SALUDANDO": [
-            "¡Hola! ¿Qué tipo de películas te gustan?",
-            "¡Qué gusto saludarte! ¿Hablamos de cine?",
-            "¡Buenas! ¿Tienes alguna película favorita?",
-            "¡Hola de nuevo! ¿Qué película tienes en mente?",
+            "¡Hola! ¿Qué película tienes en mente?",
+            "¡Buenas! ¿Qué género cinematográfico prefieres?",
+            "¡Qué gusto saludarte! ¿Qué has visto últimamente?",
+            "¡Hola de nuevo! ¿Cuál es tu película favorita?",
+            "¡Saludos! ¿Te gustan más las películas de acción o de drama?",
         ],
-
         "CONVERSANDO": [
-            "Interesante. Cuéntame un poco más.",
-            "¿Y qué opinas tú sobre ese tema?",
-            "Podemos seguir hablando de cine. ¿Qué tienes en mente?",
-            "Eso da para una buena conversación. ¿Qué más me cuentas?",
-            "¡Qué interesante! ¿Hay algo más que te gustaría comentar?",
-            "Me gustaría conocer tu punto de vista. ¿Qué piensas al respecto?",
+            "¡Interesante! ¿Qué otra película recomendarías?",
+            "¿Qué es lo que más disfrutas cuando ves una película?",
+            "Si pudieras entrar en una película, ¿cuál elegirías?",
+            "¿Qué actor te gustaría ver en una nueva película?",
+            "¿Qué historia cinematográfica nunca olvidas?",
+            "¿Prefieres un final inesperado o uno feliz?",
+            "¿Qué película volverías a ver sin aburrirte?",
+            "¡Hay mucho de qué hablar en el mundo del cine!",
+            "¿Qué película consideras una obra maestra?",
+            "¿Qué película te sorprendió más de lo esperado?",
+            "¿Qué director de cine te parece interesante?",
         ],
-
         "HABLANDO_PELICULA": [
-            "¡{tema}! ¿Qué es lo que más te gusta de esa película?",
-            "¿Qué destacarías de {tema}? ¿La recomendarías?",
-            "¿Qué te parece la historia de {tema}?",
-            "¿Volverías a ver {tema} o prefieres descubrir otra película?",
-            "¿Qué destacarías más de {tema}?",
-            "¿Qué personaje de {tema} te parece más interesante?",
-            "¿Qué sensación te dejó {tema} después de verla?",
-            "Si pudieras cambiar algo de {tema}, ¿qué sería?",
+            "¡{tema}! ¿Qué escena recuerdas mejor?",
+            "¿Qué personaje de {tema} te pareció más interesante?",
+            "¿Le recomendarías {tema} a alguien? ¿Por qué?",
+            "¿Qué cambiarías de la historia de {tema}?",
+            "¿El final de {tema} te convenció?",
+            "¿Qué puntuación le darías a {tema} del 1 al 10?",
+            "¿Qué emoción te dejó {tema} al terminar?",
+            "¿Volverías a ver {tema} dentro de unos años?",
+            "¿Qué fue lo que más te gustó de {tema}?",
+            "¿Qué aspecto de {tema} te pareció menos convincente?",
         ],
-
         "HABLANDO_ACTOR": [
-            "¿Qué actuación de {tema} te ha gustado más?",
-            "¿Qué te parece el estilo de actuación de {tema}?",
-            "¿En qué película recuerdas más a {tema}?",
-            "¿Crees que {tema} encaja bien en los papeles que interpreta?",
-            "¿Qué personaje interpretado por {tema} destacarías?",
-            "¿Te gustaría ver a {tema} en algún otro género cinematográfico?",
+            "¿Qué interpretación de {tema} te ha impresionado más?",
+            "¿En qué película dirías que {tema} dio su mejor actuación?",
+            "¿Te gustaría ver a {tema} en una película de terror?",
+            "¿Qué personaje de {tema} recuerdas con más cariño?",
+            "¿Cómo describirías el estilo actoral de {tema}?",
+            "¿Con qué otro actor te gustaría ver a {tema} trabajar?",
+            "¿Qué película de {tema} recomendarías primero?",
         ],
-
         "HABLANDO_GENERO": [
-            "¿Qué película de {tema} recomendarías?",
-            "¿Qué es lo que más disfrutas del género {tema}?",
-            "¿Prefieres las películas clásicas o las más recientes de {tema}?",
-            "¿Qué hace que una película de {tema} sea buena para ti?",
-            "¿Cuál es tu película favorita del género {tema}?",
+            "¿Qué película de {tema} recomendarías para una noche de cine?",
             "¿Qué elemento no puede faltar en una buena película de {tema}?",
+            "¿Prefieres las películas clásicas o modernas de {tema}?",
+            "¿Qué película de {tema} te sorprendió más?",
+            "¿Qué hace que una película de {tema} sea excelente?",
+            "¿Qué director relacionas con el género {tema}?",
         ],
-
         "OPINANDO": [
-            "Interesante opinión. ¿Qué te hace pensar eso?",
-            "Entiendo tu punto de vista. ¿Qué otro aspecto destacarías?",
-            "Cada persona puede interpretar una película de forma diferente. ¿Por qué opinas así?",
-            "¿Crees que esa opinión cambiaría si vieras la película otra vez?",
-            "Es interesante conocer distintas perspectivas. ¿Qué más piensas?",
+            "¡Interesante punto de vista! ¿Qué te hizo pensar así?",
+            "No todo el mundo ve una película de la misma manera. ¿Qué detalle destacarías?",
+            "¡Eso da para debatir! ¿Qué ejemplo cinematográfico se te ocurre?",
+            "¿Crees que otras personas estarían de acuerdo contigo?",
+            "¿Siempre has pensado así o cambiaste de opinión?",
+            "¿Qué escena te hizo llegar a esa conclusión?",
         ],
-
         "PREGUNTANDO": [
-            "Buena pregunta. ¿Qué aspecto del cine te interesa más?",
-            "Podemos hablar de la historia, los personajes o las actuaciones. ¿Por dónde empezamos?",
-            "Me interesa lo que preguntas. ¿Qué te hizo pensar en eso?",
-            "¿Quieres que hablemos de una película, un actor o un género en particular?",
-            "Podemos explorar ese tema desde diferentes puntos de vista. ¿Qué te interesa saber?",
+            "¡Buena pregunta! ¿Te interesa más la historia o los personajes?",
+            "Podemos verlo desde la dirección, el guion o la actuación. ¿Cuál prefieres?",
+            "¡Vamos a hablar de cine! ¿Tienes alguna película concreta en mente?",
+            "¿Quieres comparar películas o hablar de una en particular?",
+            "¿Qué te llevó a preguntarte eso?",
+            "¡Interesante! ¿Qué aspecto te gustaría explorar primero?",
         ],
-
         "PROVOCADO": [
-            "¡Vaya! Podemos tener opiniones diferentes. ¿Seguimos hablando de cine?",
-            "No pasa nada, cada quien tiene su forma de pensar. ¿Qué película prefieres?",
-            "¡Defendamos nuestras opiniones! ¿Qué te parece una buena película?",
-            "Podemos debatir sin problema. ¿Qué película defenderías a capa y espada?",
+            "¡Vaya, me estás poniendo a prueba! ¿Qué pista te hizo sospechar?",
+            "¿Un bot? ¡Eso es justo lo que tendríamos que debatir! ¿Qué película nos pone a prueba?",
+            "¡Buena provocación! ¿Qué tendría que decir para convencerte?",
+            "¡No me declares culpable todavía! Hablemos de una película.",
+            "¡Detective cinematográfico en acción! ¿Qué detalle te hizo sospechar?",
+            "¿Crees que una buena conversación basta para distinguir a una máquina?",
+            "¡Interesante acusación! ¿Qué actor interpretaría mejor a un robot?",
         ],
-
         "DESPEDIDA": [
-            "¡Ha sido una buena conversación sobre cine! ¡Hasta pronto!",
-            "¡Hasta luego! Que encuentres una gran película para ver.",
-            "¡Nos vemos! Cuando quieras, seguimos hablando de cine.",
-            "¡Gracias por conversar conmigo! ¡Hasta la próxima!",
+            "¡Me gustó esta charla de cine! ¡Hasta la próxima película!",
+            "¡Hasta luego! Que encuentres una película buenísima.",
+            "¡Nos vemos en la próxima función!",
+            "¡Gracias por la conversación! ¡Corte y fin!",
         ],
-
         "FINAL": [
             "La conversación ha terminado. ¡Hasta pronto!",
         ],
     }
 
-    # Respuestas especiales cuando el estado general es CONVERSANDO,
-    # pero el AFD detecta un tema específico.
+    # Respuestas adaptadas al estado y al tipo de mensaje.
     RESPUESTAS_ESPECIFICAS = {
         ("CONVERSANDO", "MENCION_PELICULA"): [
-            "¡{tema}! ¿Qué te parece esa película?",
-            "¿Qué es lo que más recuerdas de {tema}?",
-            "¿Recomendarías {tema} a tus amigos?",
+            "¡{tema}! ¿Qué escena te impactó más?",
+            "¿Qué nota le pondrías a {tema}?",
+            "¿Qué hace especial a {tema} para ti?",
+            "¿Recomendarías {tema}? ¿Por qué?",
         ],
-
         ("CONVERSANDO", "MENCION_ACTOR"): [
-            "¿Qué actuación de {tema} destacarías?",
-            "¿En qué película recuerdas a {tema}?",
-            "¿Qué te parece el trabajo de {tema} en el cine?",
+            "¿Cuál consideras la mejor actuación de {tema}?",
+            "¿Qué película suya recomendarías primero?",
+            "¿Con qué director te gustaría ver trabajar a {tema}?",
         ],
-
         ("CONVERSANDO", "MENCION_GENERO"): [
-            "¿Qué película de {tema} te gusta más?",
-            "¿Qué es lo que más disfrutas del género {tema}?",
-            "¿Qué película recomendarías para alguien que disfruta de {tema}?",
+            "¿Qué película de {tema} nunca te cansas de ver?",
+            "¿Qué característica define una buena película de {tema}?",
+            "¿Qué película recomendarías para introducir a alguien en {tema}?",
+        ],
+        ("HABLANDO_PELICULA", "PREGUNTA"): [
+            "Sobre {tema}, ¿qué escena recuerdas mejor?",
+            "¿Qué escena de {tema} te impactó más?",
+            "¿Qué personaje de {tema} te pareció más interesante?",
+            "¿Qué opinas del final de {tema}?",
+            "¿Qué momento de {tema} te pareció más emotivo?",
+            "¿Qué cambiarías de la historia de {tema}?",
+            "¿Qué parte de {tema} te gustaría analizar?",
+            "¿Qué puntuación le darías a {tema} del 1 al 10?",
+            "¿Qué mensaje crees que transmite {tema}?",
+            "¿Volverías a ver {tema}? ¿Por qué?",
+        ],
+        ("HABLANDO_PELICULA", "OPINION"): [
+            "¡Interesante opinión sobre {tema}! ¿Qué escena respalda tu punto de vista?",
+            "¿Qué detalle de {tema} te llevó a esa conclusión?",
+            "¿Crees que el final de {tema} fortalece su historia?",
+            "¿Qué personaje de {tema} representa mejor esa idea?",
+            "¿Qué cambiarías de {tema} para mejorarla?",
+        ],
+        ("HABLANDO_PELICULA", "AFIRMACION"): [
+            "¡Entiendo! ¿Qué parte de {tema} te gusta más?",
+            "¡Interesante! ¿Qué otra escena de {tema} destacarías?",
+            "¿Qué personaje de {tema} te parece mejor desarrollado?",
+        ],
+        ("HABLANDO_PELICULA", "NEGACION"): [
+            "Está bien. ¿Qué cambiarías de {tema}?",
+            "Entiendo. ¿Qué película te parece mejor que {tema}?",
+            "¿Qué aspecto de {tema} no terminó de convencerte?",
+        ],
+        ("HABLANDO_ACTOR", "PREGUNTA"): [
+            "Sobre {tema}, ¿te interesa su mejor actuación o su trayectoria?",
+            "¿En cuál película de {tema} te gustaría profundizar?",
+            "¿Qué personaje interpretado por {tema} quieres comentar?",
+        ],
+        ("HABLANDO_ACTOR", "OPINION"): [
+            "¿Qué actuación de {tema} respalda tu opinión?",
+            "¿Crees que {tema} interpreta mejor el drama o la comedia?",
+            "¿Qué película demuestra mejor el talento de {tema}?",
+        ],
+        ("HABLANDO_GENERO", "PREGUNTA"): [
+            "Sobre el género {tema}, ¿quieres hablar de sus películas clásicas o modernas?",
+            "¿Qué película de {tema} te gustaría analizar?",
+            "¿Te interesa conocer películas de {tema} o comparar sus estilos?",
+        ],
+        ("HABLANDO_GENERO", "OPINION"): [
+            "¿Qué película de {tema} representa mejor tu opinión?",
+            "¿Qué característica de {tema} te gusta más?",
+            "¿Qué película de {tema} recomendarías para defender esa idea?",
+        ],
+        ("OPINANDO", "PREGUNTA"): [
+            "¿Qué aspecto de tu opinión te gustaría analizar?",
+            "¿Podemos relacionar esa idea con alguna película?",
+            "¿Qué ejemplo cinematográfico ayudaría a explicarlo?",
+        ],
+        ("PREGUNTANDO", "PREGUNTA"): [
+            "¿Te interesa una respuesta sobre la historia, los actores o la dirección?",
+            "¿Quieres analizar una película concreta o hablar de cine en general?",
+            "¿Qué detalle te interesa conocer primero?",
+        ],
+    }
+
+    # Respuestas generales según el token del clasificador.
+    RESPUESTAS_TOKEN = {
+        "PROVOCACION": [
+            "¡Me estás poniendo a prueba! ¿Qué detalle te hizo sospechar?",
+            "¡Buena acusación! ¿Cómo distinguirías a una persona de una máquina?",
+            "¿Crees que una máquina podría mantener una conversación sobre cine?",
+            "¡Interesante desafío! ¿Qué película trata mejor la inteligencia artificial?",
+            "¡No saques conclusiones todavía! ¿Qué otra pregunta tienes para mí?",
+        ],
+        "PREGUNTA": [
+            "¿Qué parte de ese tema te interesa más?",
+            "¿Qué te hizo pensar en esa pregunta?",
+            "¿Quieres que lo veamos desde otra perspectiva?",
+            "¿Tienes algún ejemplo cinematográfico en mente?",
+            "¿Qué respuesta te parecería más convincente?",
+        ],
+        "OPINION": [
+            "¿Qué detalle te llevó a tener esa opinión?",
+            "¿Qué otra película te ha provocado una impresión parecida?",
+            "¿Crees que el director consiguió transmitir lo que quería?",
+            "¿Tu opinión sería distinta si cambiaras el final?",
+        ],
+        "AFIRMACION": [
+            "¡Entiendo! ¿Qué te gusta más de eso?",
+            "¡De acuerdo! ¿Se te ocurre otro ejemplo?",
+            "Interesante. ¿Siempre has pensado así?",
+            "¡Perfecto! ¿Qué más añadirías?",
+        ],
+        "NEGACION": [
+            "¡Está bien! ¿Qué opción prefieres entonces?",
+            "Entiendo, no todas las películas son para todos. ¿Qué cambiarías?",
+            "¡Vale! ¿Qué te convencería más?",
+            "De acuerdo. ¿Qué alternativa recomendarías?",
+        ],
+        "RETOMAR_TEMA": [
+            "¡Volvamos a ese tema! ¿Qué más puedes contarme?",
+            "Retomemos la conversación. ¿Qué aspecto te interesa ahora?",
+        ],
+        "DESCONOCIDO": [
+            "¡Cuéntame un poco más!",
+            "¿Cómo se relaciona eso con el cine?",
+            "¡Eso me da curiosidad! ¿Puedes explicarlo de otra forma?",
+            "¿Qué otra cosa te gustaría comentar?",
         ],
     }
 
     def __init__(self, semilla: Optional[int] = None):
-        """
-        semilla:
-            Permite reproducir la selección aleatoria durante las pruebas.
-            Si se omite, la selección es aleatoria normalmente.
-        """
         self._aleatorio = random.Random(semilla)
+        self._ultima_respuesta = {}
 
     def obtener(
         self,
         estado,
         pila=None,
         token="DESCONOCIDO",
-        entidad=None
+        entidad=None,
     ):
         """
-        Devuelve una respuesta para el estado actual.
+        Obtiene una respuesta sin cambiar la interfaz pública del proyecto.
 
-        estado:
-            Estado del AFN, por ejemplo HABLANDO_PELICULA.
-
-        pila:
-            Instancia de PilaContexto. Se utiliza como respaldo
-            cuando no se proporciona una entidad.
-
-        token:
-            Token léxico devuelto por el AFD.
-
-        entidad:
-            Película, actor o género detectado por el clasificador.
-
-        Devuelve:
-            Una cadena de texto lista para mostrar al usuario.
+        Prioridad:
+        1. Provocación.
+        2. Despedida.
+        3. Respuesta específica para estado y token.
+        4. Respuesta general para token.
+        5. Plantilla del estado.
+        6. Respuesta de respaldo.
         """
+        estado = self._normalizar(estado)
+        token = self._normalizar(token)
+        tema = self._obtener_tema(pila, entidad)
 
-        estado = self._normalizar_estado(estado)
-        token = self._normalizar_token(token)
-        tema = self._limpiar_tema(
-            self._obtener_tema(pila, entidad)
-        )
+        if token == "PROVOCACION":
+            opciones = self.RESPUESTAS_TOKEN["PROVOCACION"]
 
-        opciones = self.RESPUESTAS_ESPECIFICAS.get(
-            (estado, token)
-        )
+        elif token == "DESPEDIDA":
+            opciones = self.PLANTILLAS["DESPEDIDA"]
+
+        elif (estado, token) in self.RESPUESTAS_ESPECIFICAS:
+            opciones = self.RESPUESTAS_ESPECIFICAS[(estado, token)]
+
+        elif token in self.RESPUESTAS_TOKEN:
+            opciones = self.RESPUESTAS_TOKEN[token]
+
+        else:
+            opciones = self.PLANTILLAS.get(
+                estado,
+                self.RESPUESTAS_TOKEN["DESCONOCIDO"],
+            )
 
         if not opciones:
-            opciones = self.PLANTILLAS.get(estado)
+            opciones = self.RESPUESTAS_TOKEN["DESCONOCIDO"]
 
-        if not opciones:
-            opciones = self.PLANTILLAS["CONVERSANDO"]
+        # Evita repetir inmediatamente la misma respuesta
+        # para una combinación de estado y token.
+        clave = (estado, token)
+        anterior = self._ultima_respuesta.get(clave)
+        disponibles = [r for r in opciones if r != anterior]
 
-        plantilla = self._aleatorio.choice(opciones)
+        if not disponibles:
+            disponibles = opciones
+
+        plantilla = self._aleatorio.choice(disponibles)
 
         try:
             respuesta = plantilla.format(tema=tema)
-        except (KeyError, ValueError, IndexError):
-            # Evita que una plantilla mal formada detenga el chatbot.
-            respuesta = self.PLANTILLAS["CONVERSANDO"][0]
+        except (KeyError, ValueError, IndexError, AttributeError):
+            respuesta = self._respuesta_segura(tema)
 
-        respuesta = respuesta.strip()
+        self._ultima_respuesta[clave] = plantilla
 
-        if not respuesta:
-            return self.PLANTILLAS["CONVERSANDO"][0]
+        respuesta = re.sub(r"\s+", " ", respuesta).strip()
 
-        return respuesta
+        return respuesta or self._respuesta_segura(tema)
 
     @staticmethod
-    def _normalizar_estado(estado):
-        """Convierte el estado a una cadena segura."""
-        if not isinstance(estado, str):
+    def _normalizar(valor):
+        """Normaliza etiquetas sin modificar el texto de la conversación."""
+        if not isinstance(valor, str):
             return ""
 
-        return estado.strip().upper()
-
-    @staticmethod
-    def _normalizar_token(token):
-        """Convierte el token a una cadena segura."""
-        if not isinstance(token, str):
-            return "DESCONOCIDO"
-
-        return token.strip().upper() or "DESCONOCIDO"
+        return valor.strip().upper()
 
     @classmethod
     def _obtener_tema(cls, pila=None, entidad=None):
         """
-        Prioridad:
-        1. Entidad detectada en la entrada actual.
-        2. Tema guardado en la pila.
-        3. Tema genérico.
+        Prioriza la entidad detectada en el mensaje.
+        Si no existe, intenta recuperar el tema de la pila.
         """
-        if entidad is not None:
-            tema = cls._limpiar_tema(entidad)
-            if tema:
-                return tema
+        if isinstance(entidad, str) and entidad.strip():
+            return cls._limpiar_tema(entidad)
 
         if pila is not None:
             try:
-                tema = cls._limpiar_tema(pila.peek())
-                if tema:
-                    return tema
-            except (AttributeError, IndexError):
-                # La pila todavía podría no tener el método peek
-                # o podría no estar disponible.
+                tema = pila.peek()
+
+                if isinstance(tema, str) and tema.strip():
+                    return cls._limpiar_tema(tema)
+
+            except (AttributeError, IndexError, KeyError, TypeError):
                 pass
 
         return cls.TEMA_PREDETERMINADO
 
-    @classmethod
-    def _limpiar_tema(cls, tema):
-        """Evita insertar valores vacíos o saltos de línea en respuestas."""
+    @staticmethod
+    def _limpiar_tema(tema):
         if not isinstance(tema, str):
-            return ""
+            return "el cine"
 
         tema = re.sub(r"\s+", " ", tema).strip()
-        return tema
+        return tema or "el cine"
+
+    @staticmethod
+    def _respuesta_segura(tema="el cine"):
+        return (
+            f"¡Interesante! Hablemos de {tema}. "
+            "¿Qué es lo que más te llama la atención?"
+        )
 
     @classmethod
     def estados_disponibles(cls):
-        """Devuelve los estados que tienen plantillas."""
         return tuple(cls.PLANTILLAS.keys())
 
     @classmethod
     def validar_plantillas(cls):
-        """
-        Revisa que existan respuestas para todos los estados
-        definidos y que las plantillas tengan formato válido.
-
-        Devuelve una lista de errores.
-        Una lista vacía significa que no se detectaron problemas.
-        """
+        """Comprueba el formato de todas las plantillas."""
         errores = []
 
-        try:
-            from definiciones import ESTADOS
-        except ImportError:
-            ESTADOS = list(cls.PLANTILLAS.keys())
+        grupos = [
+            ("PLANTILLAS", cls.PLANTILLAS),
+            ("RESPUESTAS_TOKEN", cls.RESPUESTAS_TOKEN),
+            ("RESPUESTAS_ESPECIFICAS", cls.RESPUESTAS_ESPECIFICAS),
+        ]
 
-        for estado in ESTADOS:
-            opciones = cls.PLANTILLAS.get(estado)
-
-            if not opciones:
-                errores.append(
-                    f"El estado {estado} no tiene plantillas."
-                )
-                continue
-
-            for numero, plantilla in enumerate(opciones, start=1):
-                if not isinstance(plantilla, str) or not plantilla.strip():
+        for nombre_grupo, grupo in grupos:
+            for clave, opciones in grupo.items():
+                if not isinstance(opciones, list) or not opciones:
                     errores.append(
-                        f"Plantilla vacía o inválida: {estado}, opción {numero}."
+                        f"{nombre_grupo}, {clave}: "
+                        "debe contener una lista no vacía."
                     )
                     continue
 
-                try:
-                    plantilla.format(tema="Tema de prueba")
-                except (KeyError, ValueError, IndexError) as error:
-                    errores.append(
-                        f"Error de formato en {estado}, opción "
-                        f"{numero}: {error}"
-                    )
+                for numero, plantilla in enumerate(opciones, start=1):
+                    if not isinstance(plantilla, str):
+                        errores.append(
+                            f"{nombre_grupo}, {clave}, "
+                            f"respuesta {numero}: no es texto."
+                        )
+                        continue
 
-        for clave, opciones in cls.RESPUESTAS_ESPECIFICAS.items():
-            for numero, plantilla in enumerate(opciones, start=1):
-                try:
-                    plantilla.format(tema="Tema de prueba")
-                except (KeyError, ValueError, IndexError) as error:
-                    errores.append(
-                        f"Error de formato en respuesta específica "
-                        f"{clave}, opción {numero}: {error}"
-                    )
+                    try:
+                        plantilla.format(tema="Tema de prueba")
+                    except (KeyError, ValueError, IndexError) as error:
+                        errores.append(
+                            f"{nombre_grupo}, {clave}, "
+                            f"respuesta {numero}: {error}"
+                        )
 
         return errores
 
+    def reiniciar(self):
+        """Permite limpiar el historial de respuestas repetidas."""
+        self._ultima_respuesta.clear()
+
 
 if __name__ == "__main__":
-    banco = BancoPlantillas()
+    banco = BancoPlantillas(semilla=42)
 
-    print("Validando banco de respuestas...")
     errores = banco.validar_plantillas()
 
     if errores:
-        print("Se encontraron problemas:")
+        print("ERROR: se encontraron problemas en las plantillas:")
+
         for error in errores:
-            print(f"- {error}")
+            print("-", error)
     else:
         print("PASS: todas las plantillas son válidas.")
 
-    print("\nEjemplos de respuestas:")
-    print("Película:", banco.obtener(
-        "HABLANDO_PELICULA",
-        token="MENCION_PELICULA",
-        entidad="Titanic"
-    ))
-    print("Actor:", banco.obtener(
-        "HABLANDO_ACTOR",
-        token="MENCION_ACTOR",
-        entidad="Tom Hanks"
-    ))
-    print("Género:", banco.obtener(
-        "HABLANDO_GENERO",
-        token="MENCION_GENERO",
-        entidad="comedia"
-    ))
+    print("\nPruebas de respuestas:")
+
+    pruebas = [
+        ("HABLANDO_PELICULA", "PREGUNTA", "Titanic"),
+        ("HABLANDO_PELICULA", "OPINION", "Titanic"),
+        ("HABLANDO_ACTOR", "PREGUNTA", "Leonardo DiCaprio"),
+        ("HABLANDO_GENERO", "PREGUNTA", "terror"),
+        ("CONVERSANDO", "PROVOCACION", None),
+        ("CONVERSANDO", "DESCONOCIDO", None),
+        ("CONVERSANDO", "DESPEDIDA", None),
+    ]
+
+    for estado, token, entidad in pruebas:
+        respuesta = banco.obtener(
+            estado=estado,
+            token=token,
+            entidad=entidad,
+        )
+
+        print(f"[{estado} / {token}] {respuesta}")
+
+    print("\nPrueba de contexto:")
+
+    class PilaPrueba:
+        def peek(self):
+            return "Titanic"
+
+    print(
+        banco.obtener(
+            estado="HABLANDO_PELICULA",
+            pila=PilaPrueba(),
+            token="PREGUNTA",
+        )
+    )

@@ -59,12 +59,16 @@ class ClasificadorAFD:
             "de lo anterior", "ese tema", "esa pelicula", "el tema anterior"
         ),
         "PROVOCACION": (
-            # Palabras del diagrama: aburrido, malo, idiota, no sabes, eres tonto.
             "aburrido", "malo", "idiota", "no sabes", "eres tonto",
-            # Ampliacion para la prueba acordada; no figuraba en el diagrama original.
-            "eres un bot",
+            "eres un bot", "eres una maquina", "eres una inteligencia artificial",
+            "eres una ia", "eres un robot", "eres un chatbot",
+            "no eres humano", "no eres una persona",
+            "pareces una maquina", "pareces un robot", "pareces una ia",
+            "eres una computadora", "eres artificial",
             "estupido", "tonto", "inutil", "callate", "basura",
-            "no sirves", "eres malo", "que aburrido eres"
+            "no sirves", "eres malo", "que aburrido eres",
+            "no piensas", "no tienes cerebro", "solo eres un programa",
+            "te descubri", "te descubri eres un bot"
         ),
     }
 
