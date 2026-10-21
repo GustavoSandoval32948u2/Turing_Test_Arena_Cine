@@ -34,7 +34,7 @@ class ClasificadorAFD:
     REGLAS: Dict[str, Tuple[str, ...]] = {
         "SALUDO": (
             "hola", "buenas", "buenos dias", "buenas tardes", "buenas noches",
-            "que tal", "hey", "holi", "saludos"
+            "que tal", "hey", "holi", "saludos", "que onda"
         ),
         "DESPEDIDA": (
             "adios", "hasta luego", "hasta pronto", "nos vemos", "chao", "chau",

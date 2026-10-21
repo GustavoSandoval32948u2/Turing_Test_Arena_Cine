@@ -307,6 +307,47 @@ class ChatbotCine:
                 "sin depender de expectativas externas."
             ),
         },
+
+        "interstellar": {
+            "nombre": "Interstellar",
+            "argumento": (
+                "Interstellar sigue a un grupo de astronautas "
+                "que viaja a través de un agujero de gusano "
+                "en busca de un nuevo hogar para la humanidad."
+            ),
+            "escena": (
+                "Una de las escenas más recordadas ocurre "
+                "en el planeta donde el tiempo pasa de forma "
+                "mucho más lenta que en la Tierra."
+            ),
+            "final": (
+                "Cooper logra comunicarse con Murph mediante "
+                "el teseracto y posteriormente es rescatado "
+                "cerca de Saturno."
+            ),
+            "personajes": (
+                "Los personajes principales son Cooper, Murph, "
+                "Amelia Brand y el profesor Brand."
+            ),
+            "reparto": (
+                "Matthew McConaughey interpreta a Cooper, "
+                "Anne Hathaway a Amelia Brand, Jessica Chastain "
+                "a Murph y Michael Caine al profesor Brand."
+            ),
+            "opinion": (
+                "Interstellar combina ciencia ficción, exploración "
+                "espacial y una historia centrada en los vínculos "
+                "familiares."
+            ),
+            "opinion_final": (
+                "El final es emotivo porque Cooper logra reencontrarse "
+                "con Murph después de todo lo ocurrido."
+            ),
+            "significado_final": (
+                "El desenlace destaca la importancia del tiempo, "
+                "los vínculos humanos y la supervivencia."
+            ),
+        },
     }
 
     # ==========================================
